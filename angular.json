@@ -36,8 +36,6 @@
               "node_modules/firebaseui/dist/firebaseui.css"
             ],
             "scripts": [
-              "src/lib/jquery.js",
-              "src/lib/nicepage.js",
               "./node_modules/parallax-js/dist/parallax.min.js"
             ]
           },
