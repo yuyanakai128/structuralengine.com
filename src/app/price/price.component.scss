@@ -1,0 +1,459 @@
+$orange: #008080;
+$yellow: #ffffe5;
+$gray: #f5f5f5;
+$white: #fff;
+$red_dark: #990000;
+$red_bright: #cc0000;
+
+.wf-nicomoji {
+    font-family: "Nico Moji";
+}
+
+@font-face {
+    font-family: "check";
+    src: url(../../assets/font/CPFont.ttf);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+.check {
+    font-family: check;
+}
+
+section {
+    padding-bottom: 60px;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 32px;
+    }
+
+    .diagonal {
+        position: relative;
+        background: #eee;
+        margin: 0 auto;
+        transform: skewY(-1.5deg);
+        margin: -3vh 0;
+        padding: 60px 0;
+        .container {
+            transform: skewY(1.5deg);
+            padding-top: 1.5%;
+            padding-bottom: 1.5%;
+        }
+    }
+
+    &:nth-child(2n) {
+        .diagonal {
+            background-color: $yellow;
+            &::before {
+                border-width: 0 100vw 164px 0;
+                border-color: transparent #fff transparent transparent;
+            }
+
+            &::after {
+                border-width: 164px 100vw 0 0;
+                border-color: transparent #fff transparent transparent;
+            }
+        }
+    }
+
+    &:nth-child(2n + 1) {
+        .diagonal {
+            background-color: $gray;
+        }
+    }
+
+    &#contact {
+        background-color: $gray;
+        .diagonal {
+            padding: 60px 0px 20px;
+        }
+    }
+}
+
+// @media screen and (max-width: 1024px) {
+// 	.diagonal {
+// 		margin-top: -20px;
+// 	}
+// 	.about .traiangle {
+// 		border-width: 0 0 80px 100vw;
+// 	}
+// }
+
+h2 {
+    color: #000;
+    font-size: 3em;
+    text-align: center;
+}
+
+h3 {
+    margin: 16px 0;
+    font-size: 2em;
+    font-weight: bold;
+    .fc-orange {
+        color: $orange;
+    }
+}
+
+h4 {
+    margin: 16px 0 32px;
+    color: $orange;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    .fc-bk {
+        color: #333;
+    }
+
+    &.future {
+        text-align: left;
+    }
+}
+
+.bg-green {
+    background-color: #008080;
+    h3 {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px;
+        color: $white;
+        font-weight: 100;
+    }
+}
+
+.bg-gray {
+    background-color: #f5f5f5;
+    background-size: 30px 30px;
+    margin: 0 auto;
+    // background-image: radial-gradient(#f8df7d 15%, transparent 20%), radial-gradient(#f8df7d 15%, transparent 20%);
+    // background-position: 0 0, 15px 15px;
+}
+
+.bg-opablue {
+    background-color: #7bb7f8;
+    p {
+        color: #002060;
+        opacity: inherit;
+    }
+}
+
+.bg-opayellow {
+    background-color: #fdf360;
+    p {
+        color: #cc6600;
+    }
+}
+
+.bg-opared {
+    background-color: #ef857d;
+    p {
+        color: #cc0000;
+    }
+}
+
+#price_intro {
+    .feature {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 32px;
+        .content {
+            width: 50%;
+            ul {
+                li {
+                    font-size: 32px;
+                    line-height: 64px;
+                    font-weight: bold;
+                    span {
+                        margin-right: 16px;
+                        color: $orange;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .img-area {
+            width: 50%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.plan {
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    .card {
+        box-shadow: 2px 2px 4px;
+        .card-header {
+            p {
+                margin: 0;
+                // color: #333;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+        .card-body {
+            padding: 24px;
+            p {
+                text-align: center;
+                .price {
+                    margin-right: 8px;
+                    color: $red_bright;
+                    font-size: 32px;
+                }
+            }
+            ul {
+                margin: 0;
+                li {
+                    border-bottom: 1px solid #999;
+                    dl {
+                        margin: 0;
+                        padding: 8px 0;
+                        &::after {
+                            display: block;
+                            content: "";
+                            clear: both;
+                        }
+                        dt {
+                            float: left;
+                            min-width: 120px;
+                        }
+                        dd {
+                            float: left;
+                            margin-bottom: 0 !important;
+                        }
+                    }
+                    &:nth-child(2) {
+                        dl {
+                            dd {
+                                line-height: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#case {
+    .container {
+        padding: 60px 32px;
+        .card {
+            margin-bottom: 32px;
+            padding: 32px;
+            &:last-child {
+                margin: 0;
+            }
+            .img-area {
+                display: flex;
+                justify-content: center;
+                align-self: center;
+                width: 100%;
+                img {
+                    width: 50%;
+                }
+            }
+
+            h5 {
+                margin: 0;
+                padding-bottom: 16px;
+                border-bottom: 1px solid #999;
+                font-size: 32px;
+                font-weight: bold;
+                letter-spacing: 2px;
+                span {
+                    margin-left: 16px;
+                    font-weight: 500;
+                }
+
+                &::first-letter {
+                    font-size: 48px;
+                    color: $red_bright;
+                }
+            }
+
+            .data {
+                display: grid;
+                gap: 2rem;
+                width: 100%;
+                grid-template-columns: 1fr 1fr;
+                .data_body {
+                    p {
+                        margin: 24px 0 16px 0;
+                        font-size: 24px;
+                    }
+                    ul {
+                        margin: 0;
+                        li {
+                            border-bottom: 1px solid #999;
+                            &:last-child {
+                                border-bottom: 0;
+                            }
+                            dl {
+                                margin: 0;
+                                padding: 8px 0;
+                                &::after {
+                                    display: block;
+                                    content: "";
+                                    clear: both;
+                                }
+                                dt {
+                                    float: left;
+                                    margin: 0;
+                                    min-width: 150px;
+                                    line-height: 48px;
+                                }
+                                dd {
+                                    float: left;
+                                    margin: 0;
+                                    line-height: 48px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card:nth-child(2) {
+    .card-header {
+        background-color: #fdf360;
+        p {
+            color: #cc6600;
+        }
+    }
+}
+
+.card:nth-child(3) {
+    .card-header {
+        background-color: #ef857d;
+        p {
+            color: #cc0000;
+        }
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .plan {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #price_intro {
+        .feature {
+            display: block;
+            padding: 32px;
+            .content {
+                width: 100%;
+                ul {
+                    text-align: left;
+                    li {
+                        font-size: 6vw;
+                        line-height: 64px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .img-area {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .plan {
+        display: block;
+
+        .card {
+            margin-bottom: 32px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .card-body {
+                ul {
+                    li {
+                        dl {
+                            margin: 0;
+                            padding: 8px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #case {
+        .container {
+            padding: 60px 32px;
+            .card {
+                margin-bottom: 32px;
+                padding: 32px;
+
+                .data {
+                    display: block;
+                    .data_body {
+                        ul {
+                            li {
+                                dl {
+                                    margin: 0;
+                                    dt {
+                                        margin: 0;
+                                    }
+                                    dd {
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#pricetop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    margin: 0;
+}
+#pricetop a {
+    position: relative;
+    display: flex;
+    width: 65px;
+    height: 65px;
+    justify-content: center;
+    background: rgb(255 166 80);
+    color: #fff;
+    align-items: center;
+    text-decoration: none;
+    font-size: 32px;
+    border-radius: 100%;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #pricetop a {
+        width: 45px;
+        height: 45px;
+    }
+}

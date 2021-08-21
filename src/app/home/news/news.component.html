@@ -1,0 +1,21 @@
+<h2 class="check">新着記事</h2>
+<h4 class="check">Article</h4>
+<div class="box-area news">
+  <ng-container *ngFor="let item of rss_feeds; index as i">
+    <a class="u-post-header-link" href="{{item.link}}" target=”_blank”>
+      <div class="box">
+        <div class="box-content">
+          <img src="{{item.thumbnail}}" alt="note記事画像" class="" data-image-width="1232" data-image-height="441">
+          <p class="date"> {{item.pubDate_y}}. {{item.pubDate_m}}. {{item.pubDate_d}}</p>
+          <h3 class="article-title">
+            {{item.title}}
+          </h3>
+        </div>
+      </div>
+    </a>
+  </ng-container>
+</div>
+
+<div class="button-area">
+  <a href="https://note.com/structuralengine/" target="_blank" rel="noopener noreferrer" class="btn-md purchase">もっと見る</a>
+</div>

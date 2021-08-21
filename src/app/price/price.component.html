@@ -1,0 +1,226 @@
+<div id="price_top"></div>
+<h2 class="check">料金プラン</h2>
+<h4 class="check">Price</h4>
+
+<section id="price_intro">
+    <div class="bg-green">
+        <h3>構造計算の新しい料金のカタチ</h3>
+    </div>
+    <div class="bg-gray">
+        <div class="feature container">
+            <div class="content">
+                <ul>
+                    <li><span>✓</span>使った分だけ</li>
+                    <li><span>✓</span>使いたいときだけ</li>
+                    <li><span>✓</span>用途に合わせて</li>
+                </ul>
+            </div>
+            <div class="img-area">
+                <img src="../../assets/images/price_3.png" alt="料金図">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="plan">
+
+    <app-charge></app-charge>
+    <div class="button-area">
+        <div *ngIf="auth.user | async as user; else showLogin">
+            <a href="../stripe/" class="btn-md purchase">マイページへ</a>
+        </div>
+        <ng-template #showLogin>
+            <a href="../stripe" class="btn-md purchase">購入する</a>
+        </ng-template>
+    </div>
+</section>
+
+<section id="case">
+    <div class="bg-green">
+        <h3>事例集</h3>
+    </div>
+    <div class="bg-gray">
+        <div class="container">
+            <div class="card">
+                <div class="img-area">
+                    <img src="../../assets/images/22.png" alt="cad">
+                    <img src="../../assets/images/22.png" alt="bone">
+                </div>
+                <h5>門型橋脚<span>(1,569Pt)</span></h5>
+                <div class="data">
+                    <div class="data_body">
+                        <p>基本データ</p>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>節点数</dt>
+                                    <dd>49</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>断面照査数</dt>
+                                    <dd>99</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>荷重タイプ数</dt>
+                                    <dd>30</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="data_body count">
+                        <p>プラン別利用可能回数</p>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>Free</dt>
+                                    <dd>6</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Basic</dt>
+                                    <dd>63</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Enterprise</dt>
+                                    <dd>6,373</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-area">
+                    <img src="../../assets/images/22.png" alt="cad">
+                    <img src="../../assets/images/22.png" alt="bone">
+                </div>
+                <h5>Boxカルバート<span>(808Pt)</span></h5>
+                <div class="data">
+                    <div class="data_body">
+                        <p>基本データ</p>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>節点数</dt>
+                                    <dd>33</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>断面照査数</dt>
+                                    <dd>181</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>荷重タイプ数</dt>
+                                    <dd>19</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="data_body count">
+                        <p>プラン別利用可能回数</p>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>Free</dt>
+                                    <dd>12</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Basic</dt>
+                                    <dd>123</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Enterprise</dt>
+                                    <dd>12,376</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-area">
+                    <img src="../../assets/images/22.png" alt="cad">
+                    <img src="../../assets/images/22.png" alt="bone">
+                </div>
+                <h5>RC単純T形桁<span>(191Pt)</span></h5>
+                <div class="data">
+                    <div class="data_body">
+                        <p>基本データ</p>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>節点数</dt>
+                                    <dd>45</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>断面照査数</dt>
+                                    <dd>11</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>荷重タイプ数</dt>
+                                    <dd>4</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="data_body count">
+                        <p>プラン別利用可能回数</p>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>Free</dt>
+                                    <dd>52</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Basic</dt>
+                                    <dd>523</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Enterprise</dt>
+                                    <dd>52,326</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="button-area">
+                <div *ngIf="auth.user | async as user; else showLogin">
+                    <a href="../stripe/" class="btn-md purchase">マイページへ</a>
+                </div>
+                <ng-template #showLogin>
+                    <a href="../stripe/" class="btn-md purchase">購入する</a>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="pricetop">
+    <a href="#price_top">
+        <i class="fas fa-angle-up">
+        </i>
+    </a>
+</div>

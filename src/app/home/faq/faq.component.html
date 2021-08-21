@@ -1,0 +1,22 @@
+<h2 class="check">よくある質問</h2>
+<h4 class="check">FAQ</h4>
+
+<h3 class="Accordion-header">ソフトウェアに関する質問</h3>
+<div class="Accordion">
+    <div class="pointerCursor" (click)="onAccordion0($event)">
+        <i [ngClass]="showDetail_0 ? 'fa fa-minus-circle' : 'fa fa-plus-circle'"></i>
+        &nbsp;納期について教えてください
+    </div>
+    <div *ngIf="showDetail_0" class="content">
+        お客様の納期に合わせます。
+    </div>
+</div>
+<!-- <div class="Accordion">
+    <div class="pointerCursor" (click)="onAccordion1($event)">
+        <i [ngClass]="showDetail_1 ? 'fa fa-minus-circle' : 'fa fa-plus-circle'"></i>
+        &nbsp;納期について教えてください
+    </div>
+    <div *ngIf="showDetail_1" class="content">
+        お客様の納期に合わせます。
+    </div>
+</div> -->

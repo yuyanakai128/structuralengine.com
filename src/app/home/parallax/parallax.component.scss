@@ -1,0 +1,57 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  .Parallax{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .Hero{
+    display: none;
+  }
+}
+
+
+.Container {
+  background: url("../../../assets/images/threejs.png") top center no-repeat;
+  height: 600px;
+  background-size: cover;
+}
+
+h2 {
+  color: white;
+}
+
+.pic1 {
+  padding-left: 10px;
+  padding-top: 200px;
+}
+
+.pic2 {
+  padding-left: 400px;
+  padding-top: 300px;
+}
+
+.pic3 {
+  padding-left: 600px;
+  padding-top: 400px;
+}
+
+.catchphrase {
+    h1 {
+        line-height: 1.5em;
+        color: #fff;
+        font-size: 48px;
+        letter-spacing: -3px;
+        &.check {
+            font-family: check;
+        }
+    }
+}
+
+

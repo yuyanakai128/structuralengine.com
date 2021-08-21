@@ -1,0 +1,96 @@
+<div class="container plan">
+    <div class="card">
+        <div class="card-header bg-opablue">
+            <p>Free</p>
+        </div>
+        <div class="card-body">
+            <p><span class="price">￥0</span>/month</p>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>利用可能人数</dt>
+                        <dd>無制限</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>利用可能<br>ポイント数</dt>
+                        <dd>10,000ポイント/日</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>サポート</dt>
+                        <dd>×非対応</dd>
+                    </dl>
+                </li>
+            </ul>
+            <!-- <div *ngIf="auth.user | async as user"> -->
+            <div *ngIf="emailVerified">
+                <span *ngIf="currentUser.price > 0">
+                    <a (click)="mypage()" class="btn-sm buy">
+                        このプランに変更
+                    </a>
+                </span>
+                <!-- <span *ngIf="currentUser.price === 0">
+                    -
+                </span> -->
+            </div>
+        </div>
+    </div>
+    <ng-container *ngFor="let item of products">
+        <div class="card">
+            <div class="card-header bg-opayellow">
+                <p>{{ item.name }}</p>
+            </div>
+            <div class="card-body">
+                <p><span class="price">&yen;{{ item.price }}</span>/{{ item.interval }}</p>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt>利用可能人数</dt>
+                            <dd>無制限</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>利用可能<br>ポイント数</dt>
+                            <dd>{{ item.limit_point }}ポイント/day</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>サポート</dt>
+                            <dd>〇対応</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <!-- <div *ngIf="auth.user | async as user"> -->
+                <div *ngIf="emailVerified">
+                    <span *ngIf="currentUser.price > 0">
+                        <ng-container *ngIf="currentUser.priceId === item.priceId">
+                            <a (click)="mypage()" class="btn-sm cancel">
+                                プランをキャンセル
+                            </a>
+                        </ng-container>
+
+                        <ng-container *ngIf="currentUser.priceId !== item.priceId">
+                            <a (click)="mypage()" class="btn-sm buy">
+                                このプランに変更
+                            </a>
+                        </ng-container>
+                    </span>
+                    <span *ngIf="currentUser.price == 0">
+                        <a (click)="subscribe(item.priceId)" class="btn-sm buy">
+                            <ng-container *ngIf="currentUser.priceId === item.priceId">このプランを購入
+                            </ng-container>
+                            <ng-container *ngIf="currentUser.priceId !== item.priceId">このプランを購入
+                            </ng-container>
+                        </a>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </ng-container>
+</div>
