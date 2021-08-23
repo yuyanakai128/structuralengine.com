@@ -92,37 +92,38 @@ h4 {
 
 .button-area {
     margin-top: 45px;
-}
-
-.btn-md {
-    display: block;
-    max-width: 330px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 8px 32px;
-    border-radius: 8px;
-    font-weight: bold;
-    &:hover {
-        cursor: pointer;
-        opacity: 0.7;
+    // 購入ボタン
+    .btn-md {
+        display: block;
+        max-width: 330px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 8px 32px;
+        border-radius: 8px;
+        font-weight: bold;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+    }
+    // 新規会員登録はこちらボタン
+    .btn-lg {
+        display: block;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 8px 32px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 16px;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
     }
 }
 
-.btn-lg {
-    display: block;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 8px 32px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 16px;
-    &:hover {
-        cursor: pointer;
-        opacity: 0.7;
-    }
-}
-
+// プラン変更・キャンセルボタン
 .btn-sm {
     display: block;
     max-width: 210px;
@@ -138,27 +139,32 @@ h4 {
     }
 }
 
+// マイページへ・購入する・もっと見るmd
 .purchase {
     color: #fff;
     background-color: #ea553a;
 }
 
+// ログイン・登録md,lg
 .new-resis {
     color: #fff;
     background-color: #ea553a;
 }
 
+// 戻るmd
 .back {
     color: #333;
     border: 1px solid #333;
 }
 
+// プラン変更sm
 .buy {
     color: #fff;
     border-radius: 19px;
     background-color: #ea553a;
 }
 
+// プランキャンセルsm
 .cancel {
     color: #333;
     border-radius: 19px;
@@ -290,6 +296,7 @@ h4 {
     }
 }
 
+// Structural Engine会員(stripe.component)
 #login {
     .bg-gray {
         padding: 8px 0;
@@ -395,6 +402,10 @@ h4 {
             padding-bottom: 50%;
         }
     }
+    #pagetop a {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 @media screen and (max-width: 1080px) {
@@ -469,9 +480,3 @@ h4 {
     }
 }
 
-@media screen and (max-width: 767px) {
-    #pagetop a {
-        width: 45px;
-        height: 45px;
-    }
-}
