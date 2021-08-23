@@ -12,8 +12,8 @@ $white: #fff;
 }
 
 a {
-	color: black;
-	text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 .check {
@@ -22,14 +22,9 @@ a {
 
 section {
     padding-bottom: 30px;
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 32px;
-    }
     .diagonal {
         position: relative;
-        background: #eee;
+        background: #f5f5f5;
         margin: 0 auto;
         transform: skewY(-1.5deg);
         margin: -3vh 0;
@@ -40,7 +35,7 @@ section {
             padding-bottom: 1.5%;
         }
     }
-    &:nth-child(2n +1) {
+    &:nth-child(2n + 1) {
         .diagonal {
             background-color: $yellow;
             &::before {
@@ -53,7 +48,7 @@ section {
             }
         }
     }
-    &:nth-child(2n ) {
+    &:nth-child(2n) {
         .diagonal {
             background-color: $gray;
         }
@@ -64,17 +59,8 @@ section {
             padding: 60px 0px 20px;
         }
     }
-
 }
 
-// @media screen and (max-width: 1024px) {
-// 	.diagonal {
-// 		margin-top: -20px;
-// 	}
-// 	.about .traiangle {
-// 		border-width: 0 0 80px 100vw;
-// 	}
-// }
 h2 {
     color: #000;
     font-size: 3em;
@@ -104,151 +90,129 @@ h4 {
     }
 }
 
-.button-box {
-	text-align: center;
-	margin-top: 32px;
-
-	.btn-orange {
-		font-size: 18px;
-		display: inline-block;
-		padding: 8px 16px;
-		text-decoration: none;
-		color: #fff;
-		background: $orange;
-		border-radius: 4px;
-		box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-		font-weight: bold;
-		&:hover {
-			cursor: pointer;
-			opacity: 0.7;
-		}
-	}
-}
-
 .button-area {
-	margin-top: 45px;
+    margin-top: 45px;
 }
 
 .btn-md {
-	display: block;
-	max-width: 330px;
-	margin: 0 auto;
-	text-align: center;
-	padding: 8px 32px;
-	border-radius: 8px;
-	font-weight: bold;
-	&:hover {
-		cursor: pointer;
-		opacity: 0.7;
-	}
+    display: block;
+    max-width: 330px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-weight: bold;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
 }
 
 .btn-lg {
-	display: block;
-	max-width: 600px;
-	margin: 0 auto;
-	text-align: center;
-	padding: 8px 32px;
-	border-radius: 8px;
-	font-weight: bold;
-	font-size: 16px;
-	&:hover {
-		cursor: pointer;
-		opacity: 0.7;
-	}
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
 }
 
-.btn-sm{
-	display: block;
-	max-width:210px;
-	margin: 16px auto 0 auto;
-	text-align: center;
-	padding: 8px 32px;
-	border-radius: 8px;
-	font-weight: initial;
-	font-size: 14px;
-	&:hover {
-		cursor: pointer;
-		opacity: 0.7;
-	}
+.btn-sm {
+    display: block;
+    max-width: 210px;
+    margin: 16px auto 0 auto;
+    text-align: center;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-weight: initial;
+    font-size: 14px;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
 }
 
 .purchase {
-	color: #fff;
-	background-color: #ea553a;
+    color: #fff;
+    background-color: #ea553a;
 }
 
 .new-resis {
-	color: #fff;
-	background-color: #ea553a;
+    color: #fff;
+    background-color: #ea553a;
 }
 
 .back {
-	color: #333;
-	border: 1px solid #333;
+    color: #333;
+    border: 1px solid #333;
 }
 
 .buy {
-	color: #fff;
-	border-radius: 19px;
-	background-color: #ea553a;
+    color: #fff;
+    border-radius: 19px;
+    background-color: #ea553a;
 }
 
 .cancel {
-	color: #333;
-	border-radius: 19px;
-	border: 1px solid #333;
-	background-color: #f5f5f5;
+    color: #333;
+    border-radius: 19px;
+    border: 1px solid #333;
+    background-color: #f5f5f5;
 }
 
 .box-area {
-	display: grid;
-	gap: 2rem;
-	width: 100%;
-	margin-top: 32px;
-	　 .box {
-		width: 100%;
-		padding: 16px;
-		border: 1px solid rgb(73, 70, 70);
-		border-radius: 8px;
-		background-color: #fff;
-		&:hover {
-			cursor: pointer;
-			opacity: 0.7;
-		}
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 32px;
+    　 .box {
+        width: 100%;
+        padding: 16px;
+        border: 1px solid rgb(73, 70, 70);
+        border-radius: 8px;
+        background-color: #fff;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &.service {
+        grid-template-columns: 1fr 1fr;
+        .box {
+            .box-content {
+                text-align: center;
+            }
+        }
+    }
 
-		img {
-			width: 100%;
-		}
-	}
-	&.service {
-		grid-template-columns: 1fr 1fr;
-		.box {
-			.box-content {
-				text-align: center;
-			}
-		}
-	}
-
-	&.news {
-		grid-template-columns: 1fr 1fr;
-		.box {
-			.box-content {
-				text-align: left;
-				.date {
-					text-align: right;
-				}
-
-				.article-title {
-					padding-top: 16px;
-					font-size: 2em;
-					font-weight: bold;
-				}
-			}
-		}
-	}
+    &.news {
+        grid-template-columns: 1fr 1fr;
+        .box {
+            .box-content {
+                text-align: left;
+                .date {
+                    text-align: right;
+                }
+                .article-title {
+                    padding-top: 16px;
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
 }
 
+//製品の特長
 .feature {
     display: table;
     margin: 60px auto auto auto;
@@ -285,6 +249,7 @@ h4 {
     }
 }
 
+// よくある質問FAQ
 .Accordion-header {
     padding: 16px;
     background-color: #fdd35c;
@@ -303,9 +268,13 @@ h4 {
     }
 }
 
+// お問い合わせContact
 .contact-detail {
     display: flex;
     justify-content: center;
+    .map {
+        order: 2;
+    }
     .text {
         padding-right: 32px;
         order: 1;
@@ -319,9 +288,6 @@ h4 {
             }
         }
     }
-    .map {
-        order: 2;
-    }
 }
 
 #login {
@@ -331,43 +297,28 @@ h4 {
     }
     .already {
         margin: 45px 0 28px 0;
+        .mypage {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .logout {
+                font-size: 14px;
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.7;
+                }
+            }
+        }
     }
     h3 {
         margin: 0;
+        font-size: 24px;
     }
-}
-
-#login {
-	.bg-gray {
-		padding: 8px 0;
-		background-color: #f5f5f5;
-	}
-
-	h3 {
-		margin: 0;
-		font-size: 24px;
-	}
-
-	.already {
-		margin: 45px 0 28px 0;
-		.mypage{
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			.logout{
-				font-size: 14px;
-				&:hover{
-					cursor: pointer;
-					opacity: 0.7;
-				}
-			}
-		}
-	}
-	.welcome {
-		text-align: left;
-		font-size: 24px;
-		font-weight: 300;
-	}
+    .welcome {
+        text-align: left;
+        font-size: 24px;
+        font-weight: 300;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -444,7 +395,6 @@ h4 {
             padding-bottom: 50%;
         }
     }
-
 }
 
 @media screen and (max-width: 1080px) {
@@ -507,7 +457,7 @@ h4 {
         width: 65px;
         height: 65px;
         justify-content: center;
-        background: rgb(255 166 80);
+        background: #ffa650;
         color: #fff;
         align-items: center;
         text-decoration: none;
@@ -524,5 +474,4 @@ h4 {
         width: 45px;
         height: 45px;
     }
-
 }

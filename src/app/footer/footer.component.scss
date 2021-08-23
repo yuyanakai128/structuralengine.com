@@ -5,6 +5,13 @@
 
 .footer_inner {
 	padding: 32px;
+	h4 {
+		margin: 16px 0px;
+		font-size: 1.2em;
+		font-weight: bold;
+		text-align: center;
+		font-family: check;
+	}
 	a {
 		color: #000;
 		text-decoration: none;
@@ -17,11 +24,11 @@
 			margin: 12px;
 		}
 		a {
+			padding: 12px;
 			&:hover {
 				cursor: pointer;
 				opacity: 0.7;
 			}
-			padding: 12px;
 			.fa-twitter {
 				color: #1da1f2;
 			}
@@ -50,13 +57,5 @@
 	.footer_copy {
 		text-align: center;
 		padding: 16px;
-	}
-
-	h4 {
-		margin: 16px 0px;
-		font-size: 1.2em;
-		font-weight: bold;
-		text-align: center;
-		font-family: check;
 	}
 }

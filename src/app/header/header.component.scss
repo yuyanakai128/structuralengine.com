@@ -1,20 +1,10 @@
 @font-face {
-    font-family: "check";
-    src: url(../../assets/font/CPFont.ttf);
-}
-
-a {
-    color: black;
-}
-
-.check {
-    font-family: check;
+	font-family: "check";
+	src: url(../../assets/font/CPFont.ttf);
 }
 
 header {
-    // background: url("../../assets/images/threejs.png") top center no-repeat;
     width: 100%;
-    // height: 87px;
     position: relative;
     background-size: cover;
     overflow: hidden;
@@ -46,8 +36,8 @@ header {
                     text-align: center;
                     text-decoration: none;
                 }
-                .h-point{
-                    &:hover{
+                .h-point {
+                    &:hover {
                         cursor: pointer;
                         text-decoration-line: underline;
                     }
@@ -63,7 +53,7 @@ header {
                     color: #333;
                     text-decoration: none;
                     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                    &:hover{
+                    &:hover {
                         cursor: pointer;
                         opacity: 0.7;
                     }
@@ -83,96 +73,44 @@ header {
 
 @media screen and (max-width: 767px) {
     header {
-        // background: url("../../assets/images/threejs.png") top center no-repeat;
         width: 100%;
         height: 80px;
-        // height: 180vw;
         position: relative;
         background-size: cover;
         overflow: hidden;
-        .catchphrase {
-            position: absolute;
-            left: 2vh;
-            bottom: 8vw;
-            h1 {
-                line-height: 1.5em;
-                color: #fff;
-                font-size: 56px;
-                letter-spacing: -3px;
-                &.check {
-                    font-family: check;
-                }
-            }
-        }
         .menu {
-            // display: block;
             display: none;
-            text-align: center;
-            ul {
-                // justify-content: center;
-                // align-items: center;
-                margin-top: 32px;
-                li {
-                    padding: 0 8px;
-                    border-right: 1px solid;
-                    &:last-child {
-                        border-right: 0;
-                    }
-                }
+        }
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        mat-toolbar {
+            background-color: #fff;
+            mat-icon {
+                color: #333;
+                padding-top: 30px;
+            }
+            .logo {
+                padding-top: 16px;
+                padding-left: 16px;
             }
         }
-    }
-}
-
-// * {
-//     margin: 0%;
-//     padding: 0%;
-//     box-sizing: border-box;
-// }
-// .pic4 {
-//     margin-left: 600px;
-//     margin-top: 200px;
-// }
-// .login-btn {
-//     display: block;
-//     width: 100%;
-//     &:hover {
-//         cursor: pointer;
-//         opacity: 0.7;
-//     }
-// }
-
-
-@media screen and (max-width:767px) {
-.example-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    mat-toolbar{
-        background-color: #fff;
-        mat-icon{
-            color: #333;
-            padding-top: 30px;
-        }
-        .logo{
-            padding-top: 16px;
-            padding-left: 16px;
+        mat-sidenav-container {
+            flex: 1;
+            background-color: transparent;
         }
     }
 }
 
-.example-sidenav-container {
-    flex: 1;
-    background-color: transparent;
-}
-}
-
-@media screen and (min-width:768px){
-    .example-container{
+@media screen and (min-width: 768px) {
+    .hamburger {
         display: none;
     }
 }
