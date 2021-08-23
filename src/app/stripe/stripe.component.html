@@ -112,18 +112,6 @@
                         <label for="password">パスワード</label>
                         <input type="password" class="form-control" formControlName="password"
                             [(ngModel)]="loginPassword" placeholder="Password" required>
-                        <!-- <label for="rule">利用規約に同意する</label>
-                            <input type="checkbox" class="form-control" formControlName="rule"
-                            [(ngModel)]="loginRule" required> -->
-                        <!-- <label>
-                            <input type="checkbox" class="checkbox" (change)="onChange( $event)"><span>利用規約に同意する</span>
-                        </label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                利用規約に同意する
-                            </label>
-                          </div> -->
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="ruleCheck"
                                 (change)="onChange( $event)">
