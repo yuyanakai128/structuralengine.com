@@ -5,18 +5,10 @@
     margin-bottom: 8px;
   }
 }
-
-h4 {
-  span {
-    font-weight: 700;
-  }
+.u-text {
+  margin: 20px 0 0;
 }
 
-p {
-  span {
-    font-size: 16px;
-  }
-}
 .text-point {
   margin: 20px 0 0;
   ul {
@@ -26,6 +18,11 @@ p {
     list-style: outside disc;
     li {
       margin: 8px 0px;
+    }
+  }
+  p {
+    span {
+      font-size: 16px;
     }
   }
 }
@@ -42,10 +39,20 @@ p {
       font-size: 16px;
     }
   }
+  p {
+    span {
+      font-size: 16px;
+    }
+  }
 }
 
-.text-12 {
+.u-text-15 {
   margin: 0;
   text-align: center;
 }
 
+h4 {
+  span {
+    font-weight: 700;
+  }
+}

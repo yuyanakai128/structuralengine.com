@@ -131,14 +131,9 @@ h4 {
                 font-size: 32px;
                 font-weight: bold;
                 letter-spacing: 2px;
-                a {
-                    cursor: pointer;
-                    opacity: 0.7;
-
-                    span {
-                        margin-left: 16px;
-                        font-weight: 500;
-                    }
+                span {
+                    margin-left: 16px;
+                    font-weight: 500;
                 }
 
                 &::first-letter {
@@ -392,3 +387,4 @@ h4 {
         }
     }
 }
+
