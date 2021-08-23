@@ -24,64 +24,12 @@ a {
 
 section {
     padding-bottom: 60px;
-
     .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 32px;
     }
-
-    .diagonal {
-        position: relative;
-        background: #eee;
-        margin: 0 auto;
-        transform: skewY(-1.5deg);
-        margin: -3vh 0;
-        padding: 60px 0;
-        .container {
-            transform: skewY(1.5deg);
-            padding-top: 1.5%;
-            padding-bottom: 1.5%;
-        }
-    }
-
-    &:nth-child(2n) {
-        .diagonal {
-            background-color: $yellow;
-            &::before {
-                border-width: 0 100vw 164px 0;
-                border-color: transparent #fff transparent transparent;
-            }
-
-            &::after {
-                border-width: 164px 100vw 0 0;
-                border-color: transparent #fff transparent transparent;
-            }
-        }
-    }
-
-    &:nth-child(2n + 1) {
-        .diagonal {
-            background-color: $gray;
-        }
-    }
-
-    &#contact {
-        background-color: $gray;
-        .diagonal {
-            padding: 60px 0px 20px;
-        }
-    }
 }
-
-// @media screen and (max-width: 1024px) {
-// 	.diagonal {
-// 		margin-top: -20px;
-// 	}
-// 	.about .traiangle {
-// 		border-width: 0 0 80px 100vw;
-// 	}
-// }
 
 h2 {
     color: #000;
@@ -104,15 +52,10 @@ h4 {
     font-size: 1.2em;
     font-weight: bold;
     text-align: center;
-    .fc-bk {
-        color: #333;
-    }
-
-    &.future {
-        text-align: left;
-    }
 }
 
+//構造計算の新しい料金のカタチ
+//事例集
 .bg-green {
     background-color: #008080;
     h3 {
@@ -128,32 +71,9 @@ h4 {
     background-color: #f5f5f5;
     background-size: 30px 30px;
     margin: 0 auto;
-    // background-image: radial-gradient(#f8df7d 15%, transparent 20%), radial-gradient(#f8df7d 15%, transparent 20%);
-    // background-position: 0 0, 15px 15px;
 }
 
-.bg-opablue {
-    background-color: #7bb7f8;
-    p {
-        color: #002060;
-        opacity: inherit;
-    }
-}
-
-.bg-opayellow {
-    background-color: #fdf360;
-    p {
-        color: #cc6600;
-    }
-}
-
-.bg-opared {
-    background-color: #ef857d;
-    p {
-        color: #cc0000;
-    }
-}
-
+// 構造計算の新しい料金のカタチ
 #price_intro {
     .feature {
         display: flex;
@@ -184,67 +104,7 @@ h4 {
     }
 }
 
-.plan {
-    display: grid;
-    gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    .card {
-        box-shadow: 2px 2px 4px;
-        .card-header {
-            p {
-                margin: 0;
-                // color: #333;
-                font-size: 24px;
-                font-weight: bold;
-            }
-        }
-        .card-body {
-            padding: 24px;
-            p {
-                text-align: center;
-                .price {
-                    margin-right: 8px;
-                    color: $red_bright;
-                    font-size: 32px;
-                }
-            }
-            ul {
-                margin: 0;
-                li {
-                    border-bottom: 1px solid #999;
-                    dl {
-                        margin: 0;
-                        padding: 8px 0;
-                        &::after {
-                            display: block;
-                            content: "";
-                            clear: both;
-                        }
-                        dt {
-                            float: left;
-                            min-width: 120px;
-                        }
-                        dd {
-                            float: left;
-                            margin-bottom: 0 !important;
-                        }
-                    }
-                    &:nth-child(2) {
-                        dl {
-                            dd {
-                                line-height: 40px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
+// 事例集
 #case {
     .container {
         padding: 60px 32px;
@@ -327,20 +187,87 @@ h4 {
     }
 }
 
-.card:nth-child(2) {
-    .card-header {
-        background-color: #fdf360;
-        p {
-            color: #cc6600;
+//料金プランカード(charge.component.html)
+.plan {
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    .card {
+        box-shadow: 2px 2px 4px;
+        &:nth-child(1) {
+            .card-header {
+                background-color: #7bb7f8;
+                p {
+                    color: #002060;
+                }
+            }
         }
-    }
-}
-
-.card:nth-child(3) {
-    .card-header {
-        background-color: #ef857d;
-        p {
-            color: #cc0000;
+        &:nth-child(2) {
+            .card-header {
+                background-color: #fdf360;
+                p {
+                    color: #cc6600;
+                }
+            }
+        }
+        &:nth-child(3) {
+            .card-header {
+                background-color: #ef857d;
+                p {
+                    color: #cc0000;
+                }
+            }
+        }
+        .card-header {
+            p {
+                margin: 0;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+        .card-body {
+            padding: 24px;
+            p {
+                text-align: center;
+                .price {
+                    margin-right: 8px;
+                    color: $red_bright;
+                    font-size: 32px;
+                }
+            }
+            ul {
+                margin: 0;
+                li {
+                    border-bottom: 1px solid #999;
+                    dl {
+                        margin: 0;
+                        padding: 8px 0;
+                        &::after {
+                            display: block;
+                            content: "";
+                            clear: both;
+                        }
+                        dt {
+                            float: left;
+                            min-width: 120px;
+                        }
+                        dd {
+                            float: left;
+                            margin-bottom: 0 !important;
+                        }
+                    }
+                    &:nth-child(2) {
+                        dl {
+                            dd {
+                                line-height: 40px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -352,6 +279,7 @@ h4 {
 }
 
 @media screen and (max-width: 767px) {
+    // 構造計算の新しい料金のカタチ
     #price_intro {
         .feature {
             display: block;
@@ -376,28 +304,7 @@ h4 {
         }
     }
 
-    .plan {
-        display: block;
-
-        .card {
-            margin-bottom: 32px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            .card-body {
-                ul {
-                    li {
-                        dl {
-                            margin: 0;
-                            padding: 8px 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
+    // 事例集
     #case {
         .container {
             padding: 60px 32px;
@@ -426,34 +333,58 @@ h4 {
             }
         }
     }
-}
 
-#pricetop {
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    margin: 0;
-}
-#pricetop a {
-    position: relative;
-    display: flex;
-    width: 65px;
-    height: 65px;
-    justify-content: center;
-    background: rgb(255 166 80);
-    color: #fff;
-    align-items: center;
-    text-decoration: none;
-    font-size: 32px;
-    border-radius: 100%;
-    &:hover {
-        opacity: 0.7;
+    //料金プランカード
+    .plan {
+        display: block;
+
+        .card {
+            margin-bottom: 32px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .card-body {
+                ul {
+                    li {
+                        dl {
+                            margin: 0;
+                            padding: 8px 0;
+                        }
+                    }
+                }
+            }
+        }
     }
-}
 
-@media screen and (max-width: 767px) {
+    //料金トップページへ戻る
     #pricetop a {
         width: 45px;
         height: 45px;
     }
 }
+
+//料金トップページへ戻る
+#pricetop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    margin: 0;
+    a {
+        position: relative;
+        display: flex;
+        width: 65px;
+        height: 65px;
+        justify-content: center;
+        background: #ffa650;
+        color: #fff;
+        align-items: center;
+        text-decoration: none;
+        font-size: 32px;
+        border-radius: 100%;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
