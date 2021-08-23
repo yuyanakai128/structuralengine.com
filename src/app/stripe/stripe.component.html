@@ -112,6 +112,12 @@
                         <label for="password">パスワード</label>
                         <input type="password" class="form-control" formControlName="password"
                             [(ngModel)]="loginPassword" placeholder="Password" required>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="ruleCheck"
+                                (change)="onChange( $event)">
+                            <label class="custom-control-label" for="ruleCheck"></label><span><a href="../rule"
+                                    style="border-bottom: 1px solid #333;">利用規約</a>に同意する</span>
+                        </div>
                     </form>
                     <div *ngIf="loginError">
                         {{errorMessage}}

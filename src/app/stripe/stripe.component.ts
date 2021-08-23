@@ -21,6 +21,7 @@ import { StripeService } from './stripe.service';
 export class StripeComponent {
   loginForm: FormGroup;
   resetForm: FormGroup;
+  loginRule: FormGroup;
   loginUser: string;
   loginUserName: string;
   loginPassword: string;
@@ -32,6 +33,7 @@ export class StripeComponent {
   resisVisible: boolean = false;
   resetVisible: boolean = false;
   emailVerified: boolean;
+  ruleCheck:boolean;
 
   // ログインユーザー情報
   public currentUser: any;
@@ -119,6 +121,7 @@ export class StripeComponent {
     const email = this.loginForm.get('email').value;
     const password = this.loginForm.get('password').value;
     const name = this.loginForm.get('name').value;
+    if(this.ruleCheck){
     this.auth
       .createUserWithEmailAndPassword(email, password)
       .then(auth => {
@@ -135,29 +138,9 @@ export class StripeComponent {
         auth.user.sendEmailVerification()
           .then(() => {
             alert("確認メールを送信しました。")
-            this.resisVisible  =false;
+            this.resisVisible = false;
+            this.loginError = false;
           });
-
-
-        // const user = this.currentUser;
-
-        // user.updateProfile({
-        //   displayName: name,
-        // }).then(() => {
-        //   alert("sucess")
-        // }).catch((error) => {
-        //   alert("out")
-        // });
-
-
-
-        // メールアドレス確認が済んでいるかどうか
-        // if (auth.user.emailVerified) {
-        //   this.auth.signOut();
-        //   return Promise.reject('メールアドレスが確認できていません。');
-        // }
-        // this.verify();
-
         return;
       })
       .catch(err => {
@@ -166,6 +149,16 @@ export class StripeComponent {
         this.errorMessage = err;
         alert('アカウント作成に失敗しました。\n' + err);
       });
+    }else{
+      this.loginError = true;
+      this.errorMessage = '利用規約に同意されない場合、サービスをご利用になれません。';
+    }
+  }
+
+  onChange(event) {
+    if (event.target.checked) {
+      this.ruleCheck = true;
+    }
   }
 
   new_resis() {
@@ -192,43 +185,6 @@ export class StripeComponent {
       });
   }
 
-
-  // // 商品情報を収集する
-  // private setProduct(): void {
-  //   const ref = this.db.collection('products').ref;
-  //   ref.where('active', '==', true)
-  //     .get()
-  //     .then(querySnapshot => {
-  //       const items = [];
-  //       querySnapshot.forEach(async function (doc) {
-  //         const priceSnap = await doc.ref
-  //           .collection('prices')
-  //           .where('active', '==', true)
-  //           .orderBy('unit_amount')
-  //           .get();
-
-  //         const product: any = doc.data();
-
-  //         priceSnap.docs.forEach((doc) => {
-  //           const priceId = doc.id;
-  //           const priceData = doc.data();
-
-  //           if (priceData.active === true) {
-  //             items.push({
-  //               name: product.name,                       // 'BASICプラン'
-  //               billing_scheme: priceData.billing_scheme, // 'per_unit'
-  //               currency: priceData.currency,             // 'jpy'
-  //               interval: priceData.interval,             // 'month'
-  //               price: priceData.unit_amount,             // 60000
-  //               priceId,                                  //
-  //             });
-  //           }
-  //         });
-
-  //       });
-  //       this.products = items;
-  //     });
-  // }
 
   // ユーザー情報を収集する
   private setCurrentUser(): void {
@@ -280,9 +236,10 @@ export class StripeComponent {
 
   }
 
-  public back(){
+  public back() {
     this.resisVisible = false;
   }
+
 
   // ログアウト
   public logout() {
