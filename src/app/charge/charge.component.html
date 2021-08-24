@@ -1,3 +1,4 @@
+<!-- 料金表 -->
 <div class="container">
     <div class="plan">
         <div class="card">
@@ -26,16 +27,12 @@
                         </dl>
                     </li>
                 </ul>
-                <!-- <div *ngIf="auth.user | async as user"> -->
                 <div *ngIf="emailVerified">
                     <span *ngIf="currentUser.price > 0">
                         <a (click)="mypage()" class="btn-sm buy">
                             このプランに変更
                         </a>
                     </span>
-                    <!-- <span *ngIf="currentUser.price === 0">
-                    -
-                </span> -->
                 </div>
             </div>
         </div>
@@ -71,7 +68,8 @@
                             </dl>
                         </li>
                     </ul>
-                    <!-- <div *ngIf="auth.user | async as user"> -->
+
+                    <!--メール認証を行っている場合のみ，購入等可能-->
                     <div *ngIf="emailVerified">
                         <span *ngIf="currentUser.price > 0">
                             <ng-container *ngIf="currentUser.priceId === item.priceId">

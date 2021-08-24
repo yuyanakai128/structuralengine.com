@@ -80,6 +80,7 @@ export class ChargeComponent implements OnInit {
         this.products = items;
       });
 
+    //　メール認証されているユーザーかを確認する．
     this.auth.onAuthStateChanged((user) => {
       if (user) {
         this.emailVerified = user.emailVerified;
