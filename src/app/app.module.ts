@@ -15,7 +15,6 @@ import { PolicyComponent } from "./policy/policy.component";
 import { RuleComponent } from "./rule/rule.component";
 
 import { HomeComponent } from "./home/home.component";
-import { HomeHowtouseComponent } from "./home/howtouse/howtouse.component";
 import { HomeserviceComponent } from "./home/service/service.component";
 import { HomeNewsComponent } from "./home/news/news.component";
 import { HomeFaqComponent } from "./home/faq/faq.component";
@@ -38,32 +37,10 @@ import {
 import { WaitDialogComponent } from "./stripe/wait-dialog/wait-dialog.component";
 import { PriceComponent } from "./price/price.component";
 import { ChargeComponent } from "./charge/charge.component";
-
-// import { MatIconModule } from "@angular/material/icon"; // <-- 追加
-// import { MatToolbarModule } from "@angular/material/toolbar"; // <-- 追加
-// import { MatSidenavModule } from "@angular/material/sidenav"; // <-- 追加
-// import { MatListModule } from "@angular/material/list";
-// import { MatMenuModule } from "@angular/material/menu";
-// import {
-//   MdCheckboxModule,
-//   MdRadioModule,
-//   MdCardModule,
-//   MdInputModule,
-//   MdButtonModule,
-//   MdToolbarModule,
-//   MdMenuModule,
-//   MdIconModule } from '@angular/material';
-
-
-
- 
-import { MatIconModule } from '@angular/material/icon';  // <-- 追加
-import { MatToolbarModule } from '@angular/material/toolbar';  // <-- 追加
-import { MatSidenavModule } from '@angular/material/sidenav';  // <-- 追加
-import { MatListModule } from '@angular/material/list';  // <-- 追加
-
-
-
+import { MatIconModule } from "@angular/material/icon";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatListModule } from "@angular/material/list";
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: "popup",
@@ -105,7 +82,6 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     LawComponent,
     PolicyComponent,
     RuleComponent,
-    HomeHowtouseComponent,
     HomeserviceComponent,
     HomeNewsComponent,
     HomeFaqComponent,
@@ -128,13 +104,10 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     AngularFireAuthModule,
     AngularFireFunctionsModule,
     FirebaseUIModule.forRoot(firebaseUiAuthConfig),
-
-  
-      MatIconModule,  // <-- 追加
-      MatToolbarModule,  // <-- 追加
-      MatSidenavModule,  // <-- 追加
-      MatListModule,  // <-- 追加
-    
+    MatIconModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [{ provide: REGION, useValue: "asia-northeast1" }],
   entryComponents: [WaitDialogComponent],

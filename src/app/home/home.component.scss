@@ -21,7 +21,12 @@ a {
 }
 
 section {
-    padding-bottom: 30px;
+    padding-bottom: 15px;
+    &#plan,
+    &#price_intro {
+        padding-bottom: 30px;
+    }
+    //　斜めデザイン
     .diagonal {
         position: relative;
         background: #f5f5f5;
@@ -32,7 +37,15 @@ section {
         .container {
             transform: skewY(1.5deg);
             padding-top: 1.5%;
-            padding-bottom: 1.5%;
+            padding-bottom: 4.5%;
+        }
+    }
+    &#contact {
+        .diagonal {
+            transform: skewY(-0deg);
+            .container {
+                transform: skewY(0deg);
+            }
         }
     }
     &:nth-child(2n + 1) {
@@ -58,6 +71,9 @@ section {
         .diagonal {
             padding: 60px 0px 20px;
         }
+    }
+    &:last-child {
+        padding: 45px;
     }
 }
 
@@ -90,8 +106,9 @@ h4 {
     }
 }
 
+// ボタン関係
 .button-area {
-    margin-top: 45px;
+    margin-top: 30px;
 }
 
 .btn-md {
@@ -138,27 +155,32 @@ h4 {
     }
 }
 
+// マイページへ・購入する・もっと見る
 .purchase {
     color: #fff;
     background-color: #ea553a;
 }
 
+//　ログイン・登録
 .new-resis {
     color: #fff;
     background-color: #ea553a;
 }
 
+//　戻る
 .back {
     color: #333;
     border: 1px solid #333;
 }
 
+//　プラン変更，購入する
 .buy {
     color: #fff;
     border-radius: 19px;
     background-color: #ea553a;
 }
 
+//　プランキャンセル
 .cancel {
     color: #333;
     border-radius: 19px;
@@ -166,12 +188,13 @@ h4 {
     background-color: #f5f5f5;
 }
 
+//　カードデザイン
 .box-area {
     display: grid;
     gap: 2rem;
     width: 100%;
     margin-top: 32px;
-    　 .box {
+    .box {
         width: 100%;
         padding: 16px;
         border: 1px solid rgb(73, 70, 70);
@@ -193,7 +216,6 @@ h4 {
             }
         }
     }
-
     &.news {
         grid-template-columns: 1fr 1fr;
         .box {
@@ -290,37 +312,6 @@ h4 {
     }
 }
 
-#login {
-    .bg-gray {
-        padding: 8px 0;
-        background-color: #f5f5f5;
-    }
-    .already {
-        margin: 45px 0 28px 0;
-        .mypage {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .logout {
-                font-size: 14px;
-                &:hover {
-                    cursor: pointer;
-                    opacity: 0.7;
-                }
-            }
-        }
-    }
-    h3 {
-        margin: 0;
-        font-size: 24px;
-    }
-    .welcome {
-        text-align: left;
-        font-size: 24px;
-        font-weight: 300;
-    }
-}
-
 @media screen and (max-width: 767px) {
     h2 {
         color: #000;
@@ -403,7 +394,7 @@ h4 {
         justify-content: center;
         .text {
             text-align: center;
-            padding: 32px 0;
+            padding-top: 32px;
             ul {
                 li {
                     line-height: 2em;
@@ -439,13 +430,13 @@ h4 {
         min-width: 650px;
     }
     section {
-        padding-bottom: 45px;
         &#contact {
             background-color: #f5f5f5;
         }
     }
 }
 
+// ページ上部に戻る
 #pagetop {
     position: fixed;
     right: 10px;
