@@ -97,13 +97,13 @@
     </div>
     <div class="menubar">
       <ul>
-        <li><a href="./home" class="h-point">ホーム</a></li>
-        <li><a href="./home#service" class="h-point">サービス紹介</a></li>
-        <li><a href="./home#article" class="h-point">最新記事</a></li>
-        <li><a href="./home#contact" class="h-point">お問い合わせ</a></li>
-        <li><a href="./price" class="h-point">料金プラン</a></li>
+        <li><a routerLink="./home" class="h-point">ホーム</a></li>
+        <li><a routerLink="./home#service" class="h-point">サービス紹介</a></li>
+        <li><a routerLink="./home#article" class="h-point">最新記事</a></li>
+        <li><a routerLink="./home#contact" class="h-point">お問い合わせ</a></li>
+        <li><a hrrouterLinkef="./price" class="h-point">料金プラン</a></li>
         <li>
-          <a href="../stripe" class="btn-Mat btn-login">
+          <a routerLink="../stripe" class="btn-Mat btn-login">
             <div *ngIf="auth.user | async as user; else showLogin">
               マイページ
             </div>
@@ -221,12 +221,12 @@
   <mat-sidenav-container>
     <mat-sidenav #sidenav>
       <mat-nav-list>
-        <a mat-list-item href="./home">ホーム</a>
-        <a mat-list-item href="./home#service">サービス紹介</a>
-        <a mat-list-item href="./home#article">最新記事</a>
-        <a mat-list-item href="./home#contact">お問い合わせ</a>
-        <a mat-list-item href="./price">料金プラン</a>
-        <a mat-list-item href="../stripe" class="btn-Mat btn-login">
+        <a mat-list-item routerLink="./home">ホーム</a>
+        <a mat-list-item routerLink="./home#service">サービス紹介</a>
+        <a mat-list-item routerLink="./home#article">最新記事</a>
+        <a mat-list-item routerLink="./home#contact">お問い合わせ</a>
+        <a mat-list-item routerLink="./price">料金プラン</a>
+        <a mat-list-item routerLink="../stripe" class="btn-Mat btn-login">
           <div *ngIf="auth.user | async as user; else showLogin">
             マイページ
           </div>
