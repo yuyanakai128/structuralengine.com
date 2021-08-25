@@ -1,7 +1,7 @@
 <header id="container">
   <div class="menu">
     <div class="logo">
-      <a routerLink="./home">
+      <a routerLink="/home">
         <svg
           width="300"
           height="55"
@@ -97,13 +97,13 @@
     </div>
     <div class="menubar">
       <ul>
-        <li><a routerLink="./home" class="h-point">ホーム</a></li>
-        <li><a routerLink="./home#service" class="h-point">サービス紹介</a></li>
-        <li><a routerLink="./home#article" class="h-point">最新記事</a></li>
-        <li><a routerLink="./home#contact" class="h-point">お問い合わせ</a></li>
-        <li><a hrrouterLinkef="./price" class="h-point">料金プラン</a></li>
+        <li><a routerLink="/home" class="h-point">ホーム</a></li>
+        <li><a routerLink="/home" fragment="service" class="h-point">サービス紹介</a></li>
+        <li><a routerLink="/home" fragment="article" class="h-point">最新記事</a></li>
+        <li><a routerLink="/home" fragment="contact" class="h-point">お問い合わせ</a></li>
+        <li><a routerLink="/price" class="h-point">料金プラン</a></li>
         <li>
-          <a routerLink="../stripe" class="btn-Mat btn-login">
+          <a routerLink="/stripe" class="btn-Mat btn-login">
             <div *ngIf="auth.user | async as user; else showLogin">
               マイページ
             </div>
@@ -122,7 +122,7 @@
       <mat-icon>menu</mat-icon>
     </button>
     <div class="logo">
-      <a routerLink="./home">
+      <a routerLink="/home">
         <svg
           width="300"
           height="55"
@@ -221,12 +221,12 @@
   <mat-sidenav-container>
     <mat-sidenav #sidenav>
       <mat-nav-list>
-        <a mat-list-item routerLink="./home">ホーム</a>
-        <a mat-list-item routerLink="./home#service">サービス紹介</a>
-        <a mat-list-item routerLink="./home#article">最新記事</a>
-        <a mat-list-item routerLink="./home#contact">お問い合わせ</a>
-        <a mat-list-item routerLink="./price">料金プラン</a>
-        <a mat-list-item routerLink="../stripe" class="btn-Mat btn-login">
+        <a mat-list-item routerLink="/home">ホーム</a>
+        <a mat-list-item routerLink="/home" fragment="service">サービス紹介</a>
+        <a mat-list-item routerLink="/home" fragment="article">最新記事</a>
+        <a mat-list-item routerLink="/home" fragment="contact">お問い合わせ</a>
+        <a mat-list-item routerLink="/price">料金プラン</a>
+        <a mat-list-item routerLink="/stripe" class="btn-Mat btn-login">
           <div *ngIf="auth.user | async as user; else showLogin">
             マイページ
           </div>

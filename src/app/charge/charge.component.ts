@@ -194,9 +194,8 @@ export class ChargeComponent implements OnInit {
               });
             }
           });
-
-          this.products = items;
         });
+        this.products = items;
       });
   }
 

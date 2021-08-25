@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AngularFireFunctions } from '@angular/fire/functions';
-import { environment } from 'src/environments/environment';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { WaitDialogComponent } from './wait-dialog/wait-dialog.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { StripeService } from './stripe.service';
+import { RuleComponent } from '../rule/rule.component';
 
 
 
@@ -44,39 +43,28 @@ export class StripeComponent {
   amount: number;
 
   constructor(
-    private fns: AngularFireFunctions,
     public auth: AngularFireAuth,
     private db: AngularFirestore,
     private modalService: NgbModal,
     private fb: FormBuilder,
-    private router: Router,
     public stripe: StripeService) {
+
     // キャッシュ残っているユーザー情報を収集する
     this.setCurrentUser();
-    // 商品情報を収集する
-    // this.currentUser = this.stripe.currentUser;
-    // this.setProduct();
 
     this.loginError = false;
     this.connecting = false;
-    // this.resisVisible = false;
-
-    // this.emailVerified = this.stripe.emailVerified;
 
   }
 
 
   ngOnInit() {
-    // this.auth.signOut().then(() => {
-    //   this.router.navigate(['/']);
-    // });
 
     this.loginForm = this.fb.group({
       'name': ['', [Validators.required]],
       'email': ['', [Validators.required, Validators.email]],
       'password': ['', [Validators.required]]
     });
-
 
     this.auth.onAuthStateChanged((user) => {
       if (user) {
@@ -117,11 +105,19 @@ export class StripeComponent {
   }
 
   resist() {
+    this.errorMessage = '';
+    this.loginError = false;
+
+    if(!this.ruleCheck){
+      this.loginError = true;
+      this.errorMessage = '利用規約に同意されない場合、サービスをご利用になれません。';
+      return;
+    }
+
     this.connecting = true;
     const email = this.loginForm.get('email').value;
     const password = this.loginForm.get('password').value;
     const name = this.loginForm.get('name').value;
-    if(this.ruleCheck){
     this.auth
       .createUserWithEmailAndPassword(email, password)
       .then(auth => {
@@ -149,15 +145,14 @@ export class StripeComponent {
         this.errorMessage = err;
         alert('アカウント作成に失敗しました。\n' + err);
       });
-    }else{
-      this.loginError = true;
-      this.errorMessage = '利用規約に同意されない場合、サービスをご利用になれません。';
-    }
+    
   }
 
   onChange(event) {
     if (event.target.checked) {
       this.ruleCheck = true;
+    } else{
+      this.ruleCheck = false;
     }
   }
 
@@ -249,5 +244,9 @@ export class StripeComponent {
     this.stripe.verify(this.emailVerified);
   }
 
-
+  // 利用規約を表示する
+  public showRule(){
+    const modalRef = this.modalService.open(RuleComponent,
+      { size: 'xl' });
+  }
 }

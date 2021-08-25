@@ -27,10 +27,10 @@
     <app-charge></app-charge>
     <div class="button-area">
         <div *ngIf="auth.user | async as user; else showLogin">
-            <a routerLink="./stripe" class="btn-md purchase">マイページへ</a>
+            <a routerLink="/stripe" class="btn-md purchase">マイページへ</a>
         </div>
         <ng-template #showLogin>
-            <a routerLink="./stripe" class="btn-md purchase">購入する</a>
+            <a routerLink="/stripe" class="btn-md purchase">購入する</a>
         </ng-template>
     </div>
 </section>
@@ -214,10 +214,10 @@
             </div>
             <div class="button-area">
                 <div *ngIf="auth.user | async as user; else showLogin">
-                    <a routerLink="./stripe" class="btn-md purchase">マイページへ</a>
+                    <a routerLink="/stripe" class="btn-md purchase">マイページへ</a>
                 </div>
                 <ng-template #showLogin>
-                    <a routerLink="./stripe" class="btn-md purchase">購入する</a>
+                    <a routerLink="/stripe" class="btn-md purchase">購入する</a>
                 </ng-template>
             </div>
         </div>
@@ -226,7 +226,7 @@
 
 <!-- 料金ページのトップへ戻る -->
 <div id="pricetop">
-    <a routerLink="./price#price_top">
+    <a routerLink="/price" fragment="price_top">
         <i class="fas fa-angle-up">
         </i>
     </a>
