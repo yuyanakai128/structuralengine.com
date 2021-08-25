@@ -16,7 +16,7 @@
                 </ul>
             </div>
             <div class="img-area">
-                <img src="../../assets/images/price_3.png" alt="料金図">
+                <img src="../../assets/images/price_4.png" alt="料金図">
             </div>
         </div>
     </div>
@@ -27,10 +27,10 @@
     <app-charge></app-charge>
     <div class="button-area">
         <div *ngIf="auth.user | async as user; else showLogin">
-            <a href="../stripe/" class="btn-md purchase">マイページへ</a>
+            <a routerLink="/stripe" class="btn-md purchase">マイページへ</a>
         </div>
         <ng-template #showLogin>
-            <a href="../stripe" class="btn-md purchase">購入する</a>
+            <a routerLink="/stripe" class="btn-md purchase">購入する</a>
         </ng-template>
     </div>
 </section>
@@ -43,10 +43,12 @@
         <div class="container">
             <div class="card">
                 <div class="img-area">
-                    <img src="../../assets/images/22.png" alt="cad">
-                    <img src="../../assets/images/22.png" alt="bone">
+                    <img src="../../assets/images/pier_1.png" alt="cad">
+                    <img src="../../assets/images/pier_2.png" alt="bone">
                 </div>
-                <h5>門型橋脚<span>(1,569Pt)</span></h5>
+                <a href="https://note.com/structuralengine/n/n624495b54231">
+                    <h5>門型橋脚<span>(1,569Pt)</span></h5>
+                </a>
                 <div class="data">
                     <div class="data_body">
                         <p>基本データ</p>
@@ -98,10 +100,12 @@
             </div>
             <div class="card">
                 <div class="img-area">
-                    <img src="../../assets/images/22.png" alt="cad">
-                    <img src="../../assets/images/22.png" alt="bone">
+                    <img src="../../assets/images/box_1.png" alt="cad">
+                    <img src="../../assets/images/box_2.png" alt="bone">
                 </div>
-                <h5>Boxカルバート<span>(808Pt)</span></h5>
+                <a href="https://note.com/structuralengine/n/nb58bf498365e">
+                    <h5>Boxカルバート<span>(808Pt)</span></h5>
+                </a>
                 <div class="data">
                     <div class="data_body">
                         <p>基本データ</p>
@@ -153,10 +157,12 @@
             </div>
             <div class="card">
                 <div class="img-area">
-                    <img src="../../assets/images/22.png" alt="cad">
-                    <img src="../../assets/images/22.png" alt="bone">
+                    <img src="../../assets/images/RC_1.png" alt="cad">
+                    <img src="../../assets/images/RC_2.png" alt="bone">
                 </div>
-                <h5>RC単純T形桁<span>(191Pt)</span></h5>
+                <a href="https://note.com/structuralengine/n/n8397100c4cdb">
+                    <h5>RC単純T形桁<span>(191Pt)</span></h5>
+                </a>
                 <div class="data">
                     <div class="data_body">
                         <p>基本データ</p>
@@ -208,18 +214,19 @@
             </div>
             <div class="button-area">
                 <div *ngIf="auth.user | async as user; else showLogin">
-                    <a href="../stripe/" class="btn-md purchase">マイページへ</a>
+                    <a routerLink="/stripe" class="btn-md purchase">マイページへ</a>
                 </div>
                 <ng-template #showLogin>
-                    <a href="../stripe/" class="btn-md purchase">購入する</a>
+                    <a routerLink="/stripe" class="btn-md purchase">購入する</a>
                 </ng-template>
             </div>
         </div>
     </div>
 </section>
 
+<!-- 料金ページのトップへ戻る -->
 <div id="pricetop">
-    <a href="#price_top">
+    <a routerLink="/price" fragment="price_top">
         <i class="fas fa-angle-up">
         </i>
     </a>

@@ -1,50 +1,12 @@
-<div class="container plan">
-    <div class="card">
-        <div class="card-header bg-opablue">
-            <p>Free</p>
-        </div>
-        <div class="card-body">
-            <p><span class="price">￥0</span>/month</p>
-            <ul>
-                <li>
-                    <dl>
-                        <dt>利用可能人数</dt>
-                        <dd>無制限</dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt>利用可能<br>ポイント数</dt>
-                        <dd>10,000ポイント/日</dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt>サポート</dt>
-                        <dd>×非対応</dd>
-                    </dl>
-                </li>
-            </ul>
-            <!-- <div *ngIf="auth.user | async as user"> -->
-            <div *ngIf="emailVerified">
-                <span *ngIf="currentUser.price > 0">
-                    <a (click)="mypage()" class="btn-sm buy">
-                        このプランに変更
-                    </a>
-                </span>
-                <!-- <span *ngIf="currentUser.price === 0">
-                    -
-                </span> -->
-            </div>
-        </div>
-    </div>
-    <ng-container *ngFor="let item of products">
+<!-- 料金表 -->
+<div class="container">
+    <div class="plan">
         <div class="card">
-            <div class="card-header bg-opayellow">
-                <p>{{ item.name }}</p>
+            <div class="card-header">
+                <p>Free</p>
             </div>
             <div class="card-body">
-                <p><span class="price">&yen;{{ item.price }}</span>/{{ item.interval }}</p>
+                <p><span class="price">￥0</span>/month</p>
                 <ul>
                     <li>
                         <dl>
@@ -55,42 +17,87 @@
                     <li>
                         <dl>
                             <dt>利用可能<br>ポイント数</dt>
-                            <dd>{{ item.limit_point }}ポイント/day</dd>
+                            <dd>500ポイント/day</dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
                             <dt>サポート</dt>
-                            <dd>〇対応</dd>
+                            <dd>×非対応</dd>
                         </dl>
                     </li>
                 </ul>
-                <!-- <div *ngIf="auth.user | async as user"> -->
                 <div *ngIf="emailVerified">
                     <span *ngIf="currentUser.price > 0">
-                        <ng-container *ngIf="currentUser.priceId === item.priceId">
-                            <a (click)="mypage()" class="btn-sm cancel">
-                                プランをキャンセル
-                            </a>
-                        </ng-container>
-
-                        <ng-container *ngIf="currentUser.priceId !== item.priceId">
-                            <a (click)="mypage()" class="btn-sm buy">
-                                このプランに変更
-                            </a>
-                        </ng-container>
-                    </span>
-                    <span *ngIf="currentUser.price == 0">
-                        <a (click)="subscribe(item.priceId)" class="btn-sm buy">
-                            <ng-container *ngIf="currentUser.priceId === item.priceId">このプランを購入
-                            </ng-container>
-                            <ng-container *ngIf="currentUser.priceId !== item.priceId">このプランを購入
-                            </ng-container>
+                        <a (click)="mypage()" class="btn-sm buy">
+                            このプランに変更
                         </a>
                     </span>
                 </div>
-
             </div>
         </div>
-    </ng-container>
+        <ng-container *ngFor="let item of products">
+            <div class="card">
+                <div class="card-header">
+                    <p>{{ item.name }}</p>
+                </div>
+                <div class="card-body">
+                    <p><span class="price">&yen;{{ item.price }}</span>/{{ item.interval }}</p>
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt>利用可能人数</dt>
+                                <dd>無制限</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>利用可能<br>ポイント数</dt>
+                                <ng-container *ngIf="item.priceId === 'price_1JRotzGSkcvqxffEC5yerykq'">
+                                    <dd>無制限<span class="unlimit">※</span></dd>
+                                </ng-container>
+                                <ng-container *ngIf="item.priceId !== 'price_1JRotzGSkcvqxffEC5yerykq'">
+                                    <dd>{{ item.limit_point }}ポイント/day</dd>
+                                </ng-container>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>サポート</dt>
+                                <dd>〇対応</dd>
+                            </dl>
+                        </li>
+                    </ul>
+
+                    <!--メール認証を行っている場合のみ，購入等可能-->
+                    <div *ngIf="emailVerified">
+                        <span *ngIf="currentUser.price > 0">
+                            <ng-container *ngIf="currentUser.priceId === item.priceId">
+                                <a (click)="mypage()" class="btn-sm cancel">
+                                    プランをキャンセル
+                                </a>
+                            </ng-container>
+
+                            <ng-container *ngIf="currentUser.priceId !== item.priceId">
+                                <a (click)="mypage()" class="btn-sm buy">
+                                    このプランに変更
+                                </a>
+                            </ng-container>
+                        </span>
+                        <span *ngIf="currentUser.price == 0">
+                            <a (click)="subscribe(item.priceId)" class="btn-sm buy">
+                                <ng-container *ngIf="currentUser.priceId === item.priceId">このプランを購入
+                                </ng-container>
+                                <ng-container *ngIf="currentUser.priceId !== item.priceId">このプランを購入
+                                </ng-container>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <p class="caution">※ データ数が極端に多い場合，スパムと認定として計算できなくなる場合がございます．</p>
+</div>
+<div class="container">
 </div>

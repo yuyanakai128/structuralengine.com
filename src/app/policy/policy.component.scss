@@ -1,4 +1,4 @@
-.u-sheet-1 {
+.sheet {
   margin: 32px;
   h1 {
     font-size: 40px;
@@ -6,7 +6,13 @@
   }
 }
 
-.u-text {
+h4 {
+  span {
+    font-weight: 700;
+  }
+}
+
+.text {
   margin: 20px 0 0;
 }
 
@@ -20,15 +26,5 @@
     li {
       margin: 8px 0px;
     }
-  }
-}
-
-.text-black {
-  margin: 20px 0 0;
-}
-
-h4 {
-  span {
-    font-weight: 700;
   }
 }

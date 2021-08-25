@@ -1,16 +1,12 @@
-<!-- 
-<ng-template #showLogin>
-    <firebase-ui></firebase-ui>
-</ng-template> -->
-
-
 <section id="login">
     <h2 class="check">Structural Engine会員</h2>
     <h4 class="check">Member</h4>
+
+    <!-- マイページ -->
     <div *ngIf="emailVerified else showLogin">
         <div class="bg-gray already">
             <div class="container mypage">
-                <h3>個人ページ</h3>
+                <h3>マイページ</h3>
                 <a class="logout" (click)="logout()">ログアウト</a>
             </div>
         </div>
@@ -19,34 +15,13 @@
             <p>あなたは, <span class="plan-price">&yen;{{ currentUser.price }}<span class="plan-term">/{{
                         currentUser.interval
                         }}</span></span> のプランに加入しています。</p>
-            <!-- <button class="btn btn-outline-success" (click)="logout()">ログアウト</button> -->
-
 
             <!-- 商品ページ -->
             <app-charge></app-charge>
-            <!-- <p class="mypage_sub">個人情報変更</p> -->
-            <!-- 
-            <form [formGroup]="loginForm" (ngSubmit)="changeProf()" (submit)="changeProf()">
-                <label for="name">ユーザー名</label>
-                <input type="text" name="name" required name class="form-control" formControlName="name"
-                    [(ngModel)]="loginUser" placeholder="Username" id="user_name">
-                <label for="email">メールアドレス</label>
-                <input type="email" name="mail" required email class="form-control" formControlName="email"
-                    [(ngModel)]="loginUserName" placeholder="email" id="user_name_id">
-                <label for="password">パスワード</label>
-                <input type="password" class="form-control" formControlName="password"
-                    [(ngModel)]="loginPassword" placeholder="Password" required>
-            </form> -->
-            <!-- <div *ngIf="loginError">
-                {{errorMessage}}
-            </div> -->
-            <!-- <button class="btn btn-outline-success" (click)="resist()">登録</button> -->
-            <!-- <div class="button-area">
-                <a class="btn-md new-resis" (click)="changeProf()">登録</a>
-            </div> -->
         </div>
     </div>
 
+    <!--ログイン前-->
     <ng-template #showLogin>
         <div *ngIf="(!resisVisible&&!resetVisible)">
             <div class="container">
@@ -64,11 +39,9 @@
                 <div class="container">
                     <form [formGroup]="loginForm" (ngSubmit)="login()" (submit)="login()">
                         <label for="email">メールアドレス</label>
-                        <input type="email" name="mail" required email class="form-control" formControlName="email"
-                            [(ngModel)]="loginUserName" placeholder="Username" id="user_name_id">
+                        <input type="email" name="mail" required email class="form-control" formControlName="email" [(ngModel)]="loginUserName" placeholder="Username" id="user_name_id">
                         <label for="password">パスワード</label>
-                        <input type="password" class="form-control" formControlName="password"
-                            [(ngModel)]="loginPassword" placeholder="Password" required>
+                        <input type="password" class="form-control" formControlName="password" [(ngModel)]="loginPassword" placeholder="Password" required>
                     </form>
                     <a class="forget" (click)="forgetPass()">パスワードを忘れた方はこちら</a>
                     <div *ngIf="loginError">
@@ -80,20 +53,22 @@
                 </div>
             </div>
         </div>
+
+        <!--パスワード忘れ-->
         <div *ngIf="resetVisible">
             <div class="container">
                 <form [formGroup]="loginForm" (ngSubmit)="resetPass()" (submit)="resetPass()">
                     <label for="email">メールアドレス</label>
-                    <input type="email" name="mail" required email class="form-control" formControlName="email"
-                        [(ngModel)]="loginUserName" placeholder="Username" id="user_name_id">
+                    <input type="email" name="mail" required email class="form-control" formControlName="email" [(ngModel)]="loginUserName" placeholder="Username" id="user_name_id">
                 </form>
-                <!-- <button class="btn btn-outline-success" (click)="resist()">登録</button> -->
                 <div class="button-area">
                     <a class="btn-md new-resis" (click)="resetPass()">送信する</a>
-                    <a class="btn-md back" href="../stripe/" style="margin-top: 32px;">戻る</a>
+                    <a class="btn-md back" routerLink="/stripe" style="margin-top: 32px;">戻る</a>
                 </div>
             </div>
         </div>
+
+        <!--新規登録-->
         <div *ngIf="resisVisible">
             <div class="member">
                 <div class="bg-gray already">
@@ -104,19 +79,20 @@
                 <div class="container">
                     <form [formGroup]="loginForm" (ngSubmit)="resist()" (submit)="resist()">
                         <label for="name">ユーザー名</label>
-                        <input type="text" name="name" required name class="form-control" formControlName="name"
-                            [(ngModel)]="loginUser" placeholder="Username" id="user_name">
+                        <input type="text" name="name" required name class="form-control" formControlName="name" [(ngModel)]="loginUser" placeholder="Username" id="user_name">
                         <label for="email">メールアドレス</label>
-                        <input type="email" name="mail" required email class="form-control" formControlName="email"
-                            [(ngModel)]="loginUserName" placeholder="email" id="user_name_id">
+                        <input type="email" name="mail" required email class="form-control" formControlName="email" [(ngModel)]="loginUserName" placeholder="email" id="user_name_id">
                         <label for="password">パスワード</label>
-                        <input type="password" class="form-control" formControlName="password"
-                            [(ngModel)]="loginPassword" placeholder="Password" required>
+                        <input type="password" class="form-control" formControlName="password" [(ngModel)]="loginPassword" placeholder="Password" required>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="ruleCheck" (change)="onChange( $event)">
+                            <label class="custom-control-label" for="ruleCheck"></label><span><a (click)="showRule()"
+                                    style="border-bottom: 1px solid #333;">利用規約</a>に同意する</span>
+                        </div>
                     </form>
                     <div *ngIf="loginError">
                         {{errorMessage}}
                     </div>
-                    <!-- <button class="btn btn-outline-success" (click)="resist()">登録</button> -->
                     <div class="button-area">
                         <a class="btn-md new-resis" (click)="resist()">登録</a>
                         <a class="btn-md back" (click)="back()" style="margin-top: 32px;">戻る</a>

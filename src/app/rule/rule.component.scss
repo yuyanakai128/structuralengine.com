@@ -1,59 +1,66 @@
-.u-sheet-1 {
-  margin: 32px;
-  h1 {
-    font-size: 40px;
-    margin-bottom: 8px;
-  }
+.sheet {
+    margin: 32px;
+    h1 {
+        font-size: 40px;
+        margin-bottom: 8px;
+    }
+    h4 {
+        span {
+            font-weight: 700;
+        }
+    }
 }
-.u-text
- {
-  margin: 20px 0 0;
+
+p {
+    span {
+        font-size: 16px;
+    }
 }
 
 .text-point {
-  margin: 20px 0 0;
-  ul {
-    box-sizing: inherit;
-    margin: 0px auto;
-    padding-left: 20px;
-    list-style: outside disc;
+    margin: 20px 0 0;
+    ul {
+        box-sizing: inherit;
+        margin: 0px auto;
+        padding-left: 20px;
+        list-style: outside disc;
+        li {
+            margin: 8px 0px;
+        }
+    }
+    p {
+        span {
+            font-size: 16px;
+        }
+    }
+}
+
+.text {
+    margin: 20px 0 0;
+    ul {
+        padding-left: 4px;
+    }
     li {
-      margin: 8px 0px;
+        box-sizing: inherit;
+        margin: 8px 0px 6px;
+        span {
+            font-size: 16px;
+        }
     }
-  }
-  p {
-    span {
-      font-size: 16px;
+    p {
+        span {
+            font-size: 16px;
+        }
     }
-  }
 }
 
-.text-black {
-  margin: 20px 0 0;
-  ul {
-    padding-left: 4px;
-  }
-  li {
-    box-sizing: inherit;
-    margin: 8px 0px 6px;
-    span {
-      font-size: 16px;
-    }
-  }
-  p {
-    span {
-      font-size: 16px;
-    }
-  }
-}
-
-.u-text-15 {
-  margin: 0;
-  text-align: center;
+.text-12 {
+    margin: 0;
+    text-align: center;
 }
 
 h4 {
-  span {
-    font-weight: 700;
-  }
+    span {
+        font-weight: 700;
+    }
 }
