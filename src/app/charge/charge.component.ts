@@ -24,6 +24,7 @@ export class ChargeComponent implements OnInit {
 
   // 商品情報
   public products: any = [];
+  public price_unlimited: string;
 
   // user: Observable<User>;
 
@@ -35,10 +36,10 @@ export class ChargeComponent implements OnInit {
     private fb: FormBuilder,
     private fns: AngularFireFunctions,
     public auth: AngularFireAuth,
-    public stripe: StripeService
-  ) {
+    public stripe: StripeService){
     this.setCurrentUser();
     this.setProduct();
+    this.price_unlimited = environment.unlimited;
   }
 
   ngOnInit(): void {

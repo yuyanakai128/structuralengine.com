@@ -17,7 +17,7 @@
                     <li>
                         <dl>
                             <dt>利用可能<br>ポイント数</dt>
-                            <dd>500ポイント/day</dd>
+                            <dd>1000ポイント/day</dd>
                         </dl>
                     </li>
                     <li>
@@ -53,10 +53,10 @@
                         <li>
                             <dl>
                                 <dt>利用可能<br>ポイント数</dt>
-                                <ng-container *ngIf="item.priceId === 'price_1JRotzGSkcvqxffEC5yerykq'">
+                                <ng-container *ngIf="item.priceId === price_unlimited">
                                     <dd>無制限<span class="unlimit">※</span></dd>
                                 </ng-container>
-                                <ng-container *ngIf="item.priceId !== 'price_1JRotzGSkcvqxffEC5yerykq'">
+                                <ng-container *ngIf="item.priceId !== price_unlimited">
                                     <dd>{{ item.limit_point }}ポイント/day</dd>
                                 </ng-container>
                             </dl>
