@@ -1,33 +1,54 @@
 <footer class="footer">
-    <div class="footer_inner">
-        <h4>SNSをチェック</h4>
-        <div class="footer_shared">
-            <a href="https://twitter.com/sasaco_corp">
-                <i class="fab fa-twitter fa-2x"></i>
-            </a>
-            <a href="https://www.facebook.com/yosuke.sasazawa">
-                <i class="fab fa-facebook fa-2x"></i>
-            </a>
-            <a href="https://www.youtube.com/channel/UCHt4hzVJd95-m-f0r8YSCSA">
-                <i class="fab fa-youtube fa-2x"></i>
-            </a>
-            <a href="https://github.com/structuralengine">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
-        </div>
-
-        <div class="footer_links">
-            <div class="footer_link">
-                <a routerLink="/rule">利用規約</a>
-            </div>
-            <div class="footer_link">
-                <a routerLink="/policy">プライバシーポリシー</a>
-            </div>
-            <div class="footer_link">
-                <a routerLink="/law">特定商取引に基づく表示</a>
-            </div>
-        </div>
-
-        <div class="footer_copy">© 2021 Structural Engine</div>
+  <div class="footer_inner">
+    <h4>SNSをチェック</h4>
+    <div class="footer_shared">
+      <a href="https://twitter.com/sasaco_corp">
+        <i class="fab fa-twitter fa-2x"></i>
+      </a>
+      <a href="https://www.facebook.com/yosuke.sasazawa">
+        <i class="fab fa-facebook fa-2x"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCHt4hzVJd95-m-f0r8YSCSA">
+        <i class="fab fa-youtube fa-2x"></i>
+      </a>
+      <a href="https://github.com/structuralengine">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
     </div>
+
+    <div class="footer_links">
+      <div class="footer_link">
+        <a routerLink="/rule">利用規約</a>
+      </div>
+      <div class="footer_link">
+        <a routerLink="/policy">プライバシーポリシー</a>
+      </div>
+      <div class="footer_link">
+        <a routerLink="/law">特定商取引に基づく表示</a>
+      </div>
+    </div>
+    <div class="language-area">
+      <div ngbDropdown>
+        <a
+          class="btn btn-outline-primary"
+          id="language1"
+          ngbDropdownToggle
+          class="menu-btn lang"
+          >{{ language.languageIndex[language.browserLang] }}</a
+        >
+        <div ngbDropdownMenu aria-labelledby="language1">
+          <ng-container *ngFor="let index of language.languageIndex | keyvalue">
+            <a
+              ngbDropdownItem
+              (click)="language.trans(index.key)"
+              class="menu-btn"
+              >{{ index.value }}</a
+            >
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_copy">© 2021 Structural Engine</div>
+  </div>
 </footer>
