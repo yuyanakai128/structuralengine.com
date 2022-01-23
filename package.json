@@ -24,6 +24,8 @@
     "@angular/platform-browser-dynamic": "~11.0.1",
     "@angular/router": "~11.0.1",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
     "@types/jquery": "3.5.5",
     "angular-cli-ghpages": "^1.0.0-rc.1",
     "bootstrap": "^4.5.0",
