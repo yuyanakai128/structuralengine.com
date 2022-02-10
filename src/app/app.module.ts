@@ -44,6 +44,10 @@ import { MatListModule } from "@angular/material/list";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
+const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>
+  new TranslateHttpLoader(http, "./assets/i18n/", ".json");
+
+
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: "popup",
   signInOptions: [
@@ -113,10 +117,9 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
+        useFactory: httpLoaderFactory,
         deps: [HttpClient],
       },
-      defaultLanguage: "ja",
     }),
   ],
   providers: [{ provide: REGION, useValue: "asia-northeast1" }],
@@ -124,6 +127,3 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}

@@ -23,18 +23,22 @@ export class NewsService {
         // 通信成功時の処理（成功コールバック）
         console.log('通信成功!!', response);
         const res: any = response;
-        const feed = res.feed;
         const entries = res.entries;
-        
-        const url = feed.link; // "https://note.com/structuralengine"
-        const icon = feed.webfeeds_icon;
-
+        let counter = 0;
         for(const entry of entries){
           const link = entry.link;
-          let thumbnail = entry.note_creatorimage;
-          if('media_thumbnail' in entry){
+          let thumbnail = "./assets/parallax/SkyCiv-Suite-min.jpg";
+          for(const l of entry.links){
+            const t: string = l.type;
+            if(t.includes('image')){
+              thumbnail = l.href;
+              break;
+            }
+          }
+          if('media_thumbnail' in entry) {
             thumbnail = entry.media_thumbnail[0].url;
           }
+
           const title = entry.title;
           const description = entry.summary;
           const pubDate_y = entry.published_parsed[0];
@@ -50,6 +54,10 @@ export class NewsService {
             pubDate_m,
             pubDate_d
           })
+          counter++;
+          if(counter>3){
+            break; // 4つを上限とする
+          }
         }
 
       },
