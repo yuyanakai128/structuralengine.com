@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="1522.5013"
-   height="994.67181"
-   viewBox="0 0 402.82848 263.17358"
+   width="1508.8646"
+   height="969.84949"
+   viewBox="0 0 399.22043 256.60601"
    version="1.1"
    id="svg5"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
@@ -31,14 +31,14 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="0.52410025"
-     inkscape:cx="830.9479"
-     inkscape:cy="498.95035"
+     inkscape:cx="818.54569"
+     inkscape:cy="477.96199"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer4" />
+     inkscape:current-layer="layer5" />
   <defs
      id="defs2">
     <linearGradient
@@ -54,12 +54,14 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="外枠"
-     style="display:inline" />
+     style="display:inline"
+     transform="translate(-3.4179611,-5.3191536)" />
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="吹き出し"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(-3.4179611,-5.3191536)">
     <rect
        style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.529169;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="rect15483-4"
@@ -76,7 +78,8 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="グラフ"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(-3.4179611,-5.3191536)">
     <path
        style="fill:#00c8ff;fill-opacity:0.5;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 31.318268,261.66058 154.98387,187.79804 v 73.70568 z"
@@ -95,7 +98,8 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="グラフの文字"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(-3.4179611,-5.3191536)">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -117,7 +121,7 @@
          id="tspan28263-2"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="249.54776"
-         y="107.92188">5,000pt</tspan></text>
+         y="107.92188">10,000pt</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -150,7 +154,7 @@
          id="tspan28263-2-6-0-1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
          x="280.23572"
-         y="197.77101"></tspan><tspan
+         y="197.77101" /><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
          x="280.23572"
@@ -194,7 +198,7 @@
      inkscape:label="吹き出しの文字"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-1.1177952,-1.0716697)"
+     transform="translate(-4.5357563,-6.3908233)"
      style="display:inline">
     <text
        xml:space="preserve"
