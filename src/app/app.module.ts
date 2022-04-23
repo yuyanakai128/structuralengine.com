@@ -43,6 +43,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { EmploymentComponent } from './employment/employment.component';
 
 const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>
   new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -97,6 +98,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     WaitDialogComponent,
     PriceComponent,
     ChargeComponent,
+    EmploymentComponent,
   ],
   imports: [
     BrowserModule,
