@@ -6,6 +6,7 @@ import { PolicyComponent } from './policy/policy.component';
 import { RuleComponent } from './rule/rule.component';
 import { StripeComponent } from './stripe/stripe.component';
 import { PriceComponent } from './price/price.component'
+import { EmploymentComponent } from './employment/employment.component';
 
 const routes: Routes = [ 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'rule', component: RuleComponent },
   { path: 'stripe', component: StripeComponent },
   { path: 'price', component: PriceComponent },
+  { path: 'employment', component: EmploymentComponent }
 ];
 
 @NgModule({

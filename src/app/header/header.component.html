@@ -111,6 +111,7 @@
             >お問い合わせ</a
           >
         </li>
+        <li><a routerLink="/employment" class="h-point">採用情報</a></li>
         <li><a routerLink="/price" class="h-point">料金プラン</a></li>
         <li>
           <a routerLink="/stripe" class="btn-Mat btn-login">
@@ -235,6 +236,7 @@
         <a mat-list-item routerLink="/home" fragment="service">サービス紹介</a>
         <a mat-list-item routerLink="/home" fragment="article">最新記事</a>
         <a mat-list-item routerLink="/home" fragment="contact">お問い合わせ</a>
+        <a mat-list-item routerLink="/employment">採用情報</a>
         <a mat-list-item routerLink="/price">料金プラン</a>
         <a mat-list-item routerLink="/stripe" class="btn-Mat btn-login">
           <div *ngIf="auth.user | async as user; else showLogin">
