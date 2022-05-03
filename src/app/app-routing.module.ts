@@ -10,9 +10,9 @@ import { EmploymentComponent } from "./employment/employment.component";
 import { FormalComponent } from "./formal/formal.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "/formal", pathMatch: "full" },
-  { path: "formal", component: FormalComponent },
-  { path: "home", component: HomeComponent },
+  { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "home", component: FormalComponent },
+  { path: "pop", component: HomeComponent },
   { path: "law", component: LawComponent },
   { path: "policy", component: PolicyComponent },
   { path: "rule", component: RuleComponent },

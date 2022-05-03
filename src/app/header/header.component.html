@@ -52,17 +52,19 @@
         </div>
         <div class="menubar">
             <ul>
-                <li> <a routerLink="/formal">ホーム</a></li>
                 <li><a routerLink="/home" class="h-point" translate>header.home</a></li>
-                <!-- <li>
-                    <a routerLink="/home" fragment="service" class="h-point">サービス紹介</a>
+                <!--
+                <li><a routerLink="/pop" class="h-point" translate>header.home</a></li>
+                <li>
+                    <a routerLink="/pop" fragment="service" class="h-point">サービス紹介</a>
                 </li>
                 <li>
-                    <a routerLink="/home" fragment="article" class="h-point">最新記事</a>
+                    <a routerLink="/pop" fragment="article" class="h-point">最新記事</a>
                 </li>
                 <li>
-                    <a routerLink="/home" fragment="contact" class="h-point">お問い合わせ</a>
-                </li> -->
+                    <a routerLink="/pop" fragment="contact" class="h-point">お問い合わせ</a>
+                </li>
+                -->
                 <li><a routerLink="/employment" class="h-point">採用情報</a></li>
                 <li><a routerLink="/price" class="h-point">料金プラン</a></li>
                 <li>
@@ -139,11 +141,13 @@
     <mat-sidenav-container>
         <mat-sidenav #sidenav>
             <mat-nav-list>
-                <a mat-list-item routerLink="/formal">ホーム</a>
-                <a mat-list-item routerLink="/home">ホーム2</a>
-                <!-- <a mat-list-item routerLink="/home" fragment="service">サービス紹介</a>
-        <a mat-list-item routerLink="/home" fragment="article">最新記事</a>
-        <a mat-list-item routerLink="/home" fragment="contact">お問い合わせ</a> -->
+                <a mat-list-item routerLink="/home">ホーム</a>
+                <!--
+                <a mat-list-item routerLink="/pop">ホーム2</a>
+                <a mat-list-item routerLink="/pop" fragment="service">サービス紹介</a>
+                <a mat-list-item routerLink="/pop" fragment="article">最新記事</a>
+                <a mat-list-item routerLink="/pop" fragment="contact">お問い合わせ</a>
+                -->
                 <a mat-list-item routerLink="/employment">採用情報</a>
                 <a mat-list-item routerLink="/price">料金プラン</a>
                 <a mat-list-item routerLink="/stripe" class="btn-Mat btn-login">
