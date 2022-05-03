@@ -1,250 +1,162 @@
 <header id="container">
-  <div class="menu">
-    <div class="logo">
-      <a routerLink="/home">
-        <svg
-          width="300"
-          height="55"
-          version="1.1"
-          viewBox="1 1 135.68 29.965"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:cc="http://creativecommons.org/ns#"
-          xmlns:dc="http://purl.org/dc/elements/1.1/"
-          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        >
+    <div class="menu">
+        <div class="logo">
+            <a routerLink="/home">
+                <svg width="300" height="55" version="1.1" viewBox="1 1 135.68 29.965" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <title>structuralengine logo</title>
           <g fill="#0e036e">
             <path
               d="m6.0851 29.369c-3.262-0.93888-5.0793-3.9259-5.0851-8.3578-0.001941-1.4174 0.087202-2.0964 0.39418-3.0076 0.7527-2.234 2.7453-3.9196 5.3672-4.54 1.3049-0.30869 1.7066-0.63995 1.7066-1.4072 0-0.24077 0.15534-0.95758 0.3451-1.5931 0.86232-2.8868 2.4586-5.2933 4.1644-6.2781 1.7854-1.0304 2.6867-1.2626 4.8463-1.2494 3.0673 0.018912 4.5974 0.78535 6.7375 3.3746l1.1771 1.4239 1.0546-0.42033c5.1035-2.0345 10.191 1.4288 10.601 7.2166l0.11209 1.5835 1.0049 0.41484c2.8701 1.1845 4.2191 3.6721 3.9746 7.3288-0.15975 2.3914-1.1305 4.3003-2.668 5.2485l-0.72286 0.44534-16.064 0.03539c-12.344 0.027649-16.268-0.022781-16.946-0.218z"
-              stroke-width=".18946"
-            />
-            <text
-              transform="scale(.91209 1.0964)"
-              x="48.31126"
-              y="16.783815"
-              font-family="sans-serif"
-              font-size="18.277px"
-              font-weight="bold"
-              stroke-width=".45692"
-              style="
+              stroke-width=".18946" />
+            <text transform="scale(.91209 1.0964)" x="48.31126" y="16.783815" font-family="sans-serif"
+              font-size="18.277px" font-weight="bold" stroke-width=".45692" style="
                 font-variant-caps: normal;
                 font-variant-east-asian: normal;
                 font-variant-ligatures: normal;
                 font-variant-numeric: normal;
                 line-height: 1.25;
-              "
-              xml:space="preserve"
-            >
-              <tspan
-                x="48.31126"
-                y="16.783815"
-                fill="#0e036e"
-                font-family="sans-serif"
-                font-size="18.277px"
-                font-weight="bold"
-                stroke-width=".45692"
-                style="
+              " xml:space="preserve">
+              <tspan x="48.31126" y="16.783815" fill="#0e036e" font-family="sans-serif" font-size="18.277px"
+                font-weight="bold" stroke-width=".45692" style="
                   font-variant-caps: normal;
                   font-variant-east-asian: normal;
                   font-variant-ligatures: normal;
                   font-variant-numeric: normal;
-                "
-              >
+                ">
                 Structural
               </tspan>
             </text>
-            <text
-              transform="scale(.92167 1.085)"
-              x="48.724949"
-              y="26.571568"
-              font-family="sans-serif"
-              font-size="9.4473px"
-              stroke-width=".23618"
-              style="
+            <text transform="scale(.92167 1.085)" x="48.724949" y="26.571568" font-family="sans-serif"
+              font-size="9.4473px" stroke-width=".23618" style="
                 font-variant-caps: normal;
                 font-variant-east-asian: normal;
                 font-variant-ligatures: normal;
                 font-variant-numeric: normal;
                 line-height: 1.25;
-              "
-              xml:space="preserve"
-            >
-              <tspan
-                x="48.724949"
-                y="26.571568"
-                fill="#0e036e"
-                font-family="sans-serif"
-                font-size="9.4473px"
-                stroke-width=".23618"
-                style="
+              " xml:space="preserve">
+              <tspan x="48.724949" y="26.571568" fill="#0e036e" font-family="sans-serif" font-size="9.4473px"
+                stroke-width=".23618" style="
                   font-variant-caps: normal;
                   font-variant-east-asian: normal;
                   font-variant-ligatures: normal;
                   font-variant-numeric: normal;
-                "
-              >
+                ">
                 engine
               </tspan>
             </text>
           </g>
-          <path
-            transform="matrix(.056798 0 0 .05381 85.381 5.605)"
-            d="m-1068.7 306.54-167.19 22.994-73.532-151.9 121.74-116.87 148.77 79.668z"
-            fill="#fff"
-          />
+          <path transform="matrix(.056798 0 0 .05381 85.381 5.605)"
+            d="m-1068.7 306.54-167.19 22.994-73.532-151.9 121.74-116.87 148.77 79.668z" fill="#fff" />
         </svg>
-      </a>
+            </a>
+        </div>
+        <div class="menubar">
+            <ul>
+                <li><a routerLink="/home" class="h-point" translate>header.home</a></li>
+                <!--
+                <li><a routerLink="/pop" class="h-point" translate>header.home</a></li>
+                <li>
+                    <a routerLink="/pop" fragment="service" class="h-point">サービス紹介</a>
+                </li>
+                <li>
+                    <a routerLink="/pop" fragment="article" class="h-point">最新記事</a>
+                </li>
+                <li>
+                    <a routerLink="/pop" fragment="contact" class="h-point">お問い合わせ</a>
+                </li>
+                -->
+                <li><a routerLink="/employment" class="h-point">採用情報</a></li>
+                <li><a routerLink="/price" class="h-point">料金プラン</a></li>
+                <li>
+                    <a routerLink="/stripe" class="btn-Mat btn-login">
+                        <div *ngIf="auth.user | async as user; else showLogin">
+                            マイページ
+                        </div>
+                        <ng-template #showLogin>ログイン</ng-template>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="menubar">
-      <ul>
-        <li><a routerLink="/home" class="h-point" translate>header.home</a></li>
-        <li>
-          <a routerLink="/home" fragment="service" class="h-point"
-            >サービス紹介</a
-          >
-        </li>
-        <li>
-          <a routerLink="/home" fragment="article" class="h-point">最新記事</a>
-        </li>
-        <li>
-          <a routerLink="/home" fragment="contact" class="h-point"
-            >お問い合わせ</a
-          >
-        </li>
-        <li><a routerLink="/employment" class="h-point">採用情報</a></li>
-        <li><a routerLink="/price" class="h-point">料金プラン</a></li>
-        <li>
-          <a routerLink="/stripe" class="btn-Mat btn-login">
-            <div *ngIf="auth.user | async as user; else showLogin">
-              マイページ
-            </div>
-            <ng-template #showLogin>ログイン</ng-template>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
 </header>
 
 <!-- スマホ用ヘッダー（ハンバーガー） -->
 <div class="hamburger">
-  <mat-toolbar>
-    <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-toolbar>
+        <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <div class="logo">
-      <a routerLink="/home">
-        <svg
-          width="300"
-          height="55"
-          version="1.1"
-          viewBox="1 1 135.68 29.965"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:cc="http://creativecommons.org/ns#"
-          xmlns:dc="http://purl.org/dc/elements/1.1/"
-          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-        >
+        <div class="logo">
+            <a routerLink="/home">
+                <svg width="300" height="55" version="1.1" viewBox="1 1 135.68 29.965" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <title>structuralengine logo</title>
           <g fill="#0e036e">
             <path
               d="m6.0851 29.369c-3.262-0.93888-5.0793-3.9259-5.0851-8.3578-0.001941-1.4174 0.087202-2.0964 0.39418-3.0076 0.7527-2.234 2.7453-3.9196 5.3672-4.54 1.3049-0.30869 1.7066-0.63995 1.7066-1.4072 0-0.24077 0.15534-0.95758 0.3451-1.5931 0.86232-2.8868 2.4586-5.2933 4.1644-6.2781 1.7854-1.0304 2.6867-1.2626 4.8463-1.2494 3.0673 0.018912 4.5974 0.78535 6.7375 3.3746l1.1771 1.4239 1.0546-0.42033c5.1035-2.0345 10.191 1.4288 10.601 7.2166l0.11209 1.5835 1.0049 0.41484c2.8701 1.1845 4.2191 3.6721 3.9746 7.3288-0.15975 2.3914-1.1305 4.3003-2.668 5.2485l-0.72286 0.44534-16.064 0.03539c-12.344 0.027649-16.268-0.022781-16.946-0.218z"
-              stroke-width=".18946"
-            />
-            <text
-              transform="scale(.91209 1.0964)"
-              x="48.31126"
-              y="16.783815"
-              font-family="sans-serif"
-              font-size="18.277px"
-              font-weight="bold"
-              stroke-width=".45692"
-              style="
+              stroke-width=".18946" />
+            <text transform="scale(.91209 1.0964)" x="48.31126" y="16.783815" font-family="sans-serif"
+              font-size="18.277px" font-weight="bold" stroke-width=".45692" style="
                 font-variant-caps: normal;
                 font-variant-east-asian: normal;
                 font-variant-ligatures: normal;
                 font-variant-numeric: normal;
                 line-height: 1.25;
-              "
-              xml:space="preserve"
-            >
-              <tspan
-                x="48.31126"
-                y="16.783815"
-                fill="#0e036e"
-                font-family="sans-serif"
-                font-size="18.277px"
-                font-weight="bold"
-                stroke-width=".45692"
-                style="
+              " xml:space="preserve">
+              <tspan x="48.31126" y="16.783815" fill="#0e036e" font-family="sans-serif" font-size="18.277px"
+                font-weight="bold" stroke-width=".45692" style="
                   font-variant-caps: normal;
                   font-variant-east-asian: normal;
                   font-variant-ligatures: normal;
                   font-variant-numeric: normal;
-                "
-              >
+                ">
                 Structural
               </tspan>
             </text>
-            <text
-              transform="scale(.92167 1.085)"
-              x="48.724949"
-              y="26.571568"
-              font-family="sans-serif"
-              font-size="9.4473px"
-              stroke-width=".23618"
-              style="
+            <text transform="scale(.92167 1.085)" x="48.724949" y="26.571568" font-family="sans-serif"
+              font-size="9.4473px" stroke-width=".23618" style="
                 font-variant-caps: normal;
                 font-variant-east-asian: normal;
                 font-variant-ligatures: normal;
                 font-variant-numeric: normal;
                 line-height: 1.25;
-              "
-              xml:space="preserve"
-            >
-              <tspan
-                x="48.724949"
-                y="26.571568"
-                fill="#0e036e"
-                font-family="sans-serif"
-                font-size="9.4473px"
-                stroke-width=".23618"
-                style="
+              " xml:space="preserve">
+              <tspan x="48.724949" y="26.571568" fill="#0e036e" font-family="sans-serif" font-size="9.4473px"
+                stroke-width=".23618" style="
                   font-variant-caps: normal;
                   font-variant-east-asian: normal;
                   font-variant-ligatures: normal;
                   font-variant-numeric: normal;
-                "
-              >
+                ">
                 engine
               </tspan>
             </text>
           </g>
-          <path
-            transform="matrix(.056798 0 0 .05381 85.381 5.605)"
-            d="m-1068.7 306.54-167.19 22.994-73.532-151.9 121.74-116.87 148.77 79.668z"
-            fill="#fff"
-          />
+          <path transform="matrix(.056798 0 0 .05381 85.381 5.605)"
+            d="m-1068.7 306.54-167.19 22.994-73.532-151.9 121.74-116.87 148.77 79.668z" fill="#fff" />
         </svg>
-      </a>
-    </div>
-  </mat-toolbar>
+            </a>
+        </div>
+    </mat-toolbar>
 
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav>
-      <mat-nav-list>
-        <a mat-list-item routerLink="/home">ホーム</a>
-        <a mat-list-item routerLink="/home" fragment="service">サービス紹介</a>
-        <a mat-list-item routerLink="/home" fragment="article">最新記事</a>
-        <a mat-list-item routerLink="/home" fragment="contact">お問い合わせ</a>
-        <a mat-list-item routerLink="/employment">採用情報</a>
-        <a mat-list-item routerLink="/price">料金プラン</a>
-        <a mat-list-item routerLink="/stripe" class="btn-Mat btn-login">
-          <div *ngIf="auth.user | async as user; else showLogin">
-            マイページ
-          </div>
-          <ng-template #showLogin>ログイン</ng-template>
-        </a>
-      </mat-nav-list>
-    </mat-sidenav>
-  </mat-sidenav-container>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav>
+            <mat-nav-list>
+                <a mat-list-item routerLink="/home">ホーム</a>
+                <!--
+                <a mat-list-item routerLink="/pop">ホーム2</a>
+                <a mat-list-item routerLink="/pop" fragment="service">サービス紹介</a>
+                <a mat-list-item routerLink="/pop" fragment="article">最新記事</a>
+                <a mat-list-item routerLink="/pop" fragment="contact">お問い合わせ</a>
+                -->
+                <a mat-list-item routerLink="/employment">採用情報</a>
+                <a mat-list-item routerLink="/price">料金プラン</a>
+                <a mat-list-item routerLink="/stripe" class="btn-Mat btn-login">
+                    <div *ngIf="auth.user | async as user; else showLogin">
+                        マイページ
+                    </div>
+                    <ng-template #showLogin>ログイン</ng-template>
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+    </mat-sidenav-container>
 </div>
