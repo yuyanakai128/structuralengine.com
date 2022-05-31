@@ -4,7 +4,7 @@ import { NewsService } from "../home/news/news.service";
 @Component({
   selector: "app-formal",
   templateUrl: "./formal.component.html",
-  styleUrls: ["./formal.component.scss"],
+  styleUrls: ["./formal.component.scss", "./parallax.scss"],
 })
 export class FormalComponent implements OnInit {
   constructor(private news: NewsService) {}
