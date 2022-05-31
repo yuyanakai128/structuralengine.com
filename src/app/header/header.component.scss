@@ -1,6 +1,6 @@
 @font-face {
-	font-family: "check";
-	src: url(../../assets/font/CPFont.ttf);
+    font-family: "check";
+    src: url(../../assets/font/CPFont.ttf);
 }
 
 header {
@@ -17,7 +17,8 @@ header {
     padding: 16px;
     background-color: #fff;
     box-sizing: border-box;
-    max-width: 1200px;
+    // padding-left: calc(env(safe-area-inset-left) + 96px);
+    // padding-right: calc(env(safe-area-inset-right) + 96px);
     width: 100%;
     margin: 0 auto;
     .menubar {
@@ -82,7 +83,6 @@ header {
             display: none;
         }
     }
-
     .hamburger {
         display: flex;
         flex-direction: column;

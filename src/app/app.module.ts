@@ -44,6 +44,7 @@ import { MatListModule } from "@angular/material/list";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { EmploymentComponent } from './employment/employment.component';
+import { FormalComponent } from './formal/formal.component';
 
 const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>
   new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -99,6 +100,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     PriceComponent,
     ChargeComponent,
     EmploymentComponent,
+    FormalComponent,
   ],
   imports: [
     BrowserModule,
