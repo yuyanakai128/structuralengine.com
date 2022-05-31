@@ -1,0 +1,468 @@
+$orange: #ea553a;
+$yellow: #ffffe5;
+$gray: #f5f5f5;
+$white: #fff;
+.wf-nicomoji {
+    font-family: "Nico Moji";
+}
+
+@font-face {
+    font-family: "check";
+    src: url(../../assets/font/CPFont.ttf);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.check {
+    font-family: check;
+}
+
+section {
+    padding-bottom: 15px;
+    &#plan,
+    &#price_intro {
+        padding-bottom: 30px;
+    }
+    //　斜めデザイン
+    .diagonal {
+        position: relative;
+        background: #f5f5f5;
+        margin: 0 auto;
+        transform: skewY(-1.5deg);
+        margin: -3vh 0;
+        padding: 60px 0;
+        .container {
+            transform: skewY(1.5deg);
+            padding-top: 1.5%;
+            padding-bottom: 4.5%;
+        }
+    }
+    &#contact {
+        .diagonal {
+            transform: skewY(-0deg);
+            .container {
+                transform: skewY(0deg);
+            }
+        }
+    }
+    &:nth-child(2n + 1) {
+        .diagonal {
+            background-color: $yellow;
+            &::before {
+                border-width: 0 100vw 164px 0;
+                border-color: transparent #fff transparent transparent;
+            }
+            &::after {
+                border-width: 164px 100vw 0 0;
+                border-color: transparent #fff transparent transparent;
+            }
+        }
+    }
+    &:nth-child(2n) {
+        .diagonal {
+            background-color: $gray;
+        }
+    }
+    &#contact {
+        background-color: $gray;
+        .diagonal {
+            padding: 60px 0px 20px;
+        }
+    }
+    &:last-child {
+        padding: 45px;
+    }
+}
+
+h2 {
+    color: #000;
+    font-size: 3em;
+    text-align: center;
+}
+
+h3 {
+    margin: 16px 0;
+    font-size: 2em;
+    font-weight: bold;
+    .fc-orange {
+        color: $orange;
+    }
+}
+
+h4 {
+    margin: 16px 0 32px;
+    color: $orange;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    .fc-bk {
+        color: #333;
+    }
+    &.future {
+        text-align: left;
+    }
+}
+
+// ボタン関係
+.button-area {
+    margin-top: 30px;
+}
+
+.btn-md {
+    display: block;
+    max-width: 330px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-weight: bold;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+.btn-lg {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+.btn-sm {
+    display: block;
+    max-width: 210px;
+    margin: 16px auto 0 auto;
+    text-align: center;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-weight: initial;
+    font-size: 14px;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+// マイページへ・購入する・もっと見る
+.purchase {
+    color: #fff;
+    background-color: #ea553a;
+}
+
+//　ログイン・登録
+.new-resis {
+    color: #fff;
+    background-color: #ea553a;
+}
+
+//　戻る
+.back {
+    color: #333;
+    border: 1px solid #333;
+}
+
+//　プラン変更，購入する
+.buy {
+    color: #fff;
+    border-radius: 19px;
+    background-color: #ea553a;
+}
+
+//　プランキャンセル
+.cancel {
+    color: #333;
+    border-radius: 19px;
+    border: 1px solid #333;
+    background-color: #f5f5f5;
+}
+
+//　カードデザイン
+.box-area {
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 32px;
+    .box {
+        width: 100%;
+        padding: 16px;
+        border: 1px solid rgb(73, 70, 70);
+        border-radius: 8px;
+        background-color: #fff;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &.service {
+        grid-template-columns: 1fr 1fr;
+        .box {
+            .box-content {
+                text-align: center;
+            }
+        }
+    }
+    &.news {
+        grid-template-columns: 1fr 1fr;
+        .box {
+            .box-content {
+                text-align: left;
+                .date {
+                    text-align: right;
+                }
+                .article-title {
+                    padding-top: 16px;
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+//製品の特長
+.feature {
+    display: table;
+    margin: 60px auto auto auto;
+    .feature-part {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+        .feature-img {
+            img {
+                width: 83%;
+            }
+        }
+        &:nth-child(2n) {
+            justify-content: flex-end;
+            .feature-txt {
+                order: 2;
+            }
+            .feature-img {
+                order: 1;
+                img {
+                    margin-right: 16px;
+                }
+            }
+        }
+        &:nth-child(2n + 1) {
+            justify-content: flex-start;
+            .feature-img {
+                order: 1;
+                img {
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+}
+
+// よくある質問FAQ
+.Accordion-header {
+    padding: 16px;
+    background-color: #fdd35c;
+}
+
+.Accordion {
+    .pointerCursor {
+        padding: 16px;
+        border-bottom: 1px solid #333;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    .content {
+        padding: 16px;
+        font-size: 1em;
+    }
+}
+
+// お問い合わせContact
+.contact-detail {
+    display: flex;
+    justify-content: center;
+    .map {
+        order: 2;
+    }
+    .text {
+        padding-right: 32px;
+        order: 1;
+        ul {
+            li {
+                line-height: 2em;
+                i {
+                    position: relative;
+                    right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h2 {
+        color: #000;
+        font-size: 2em;
+        text-align: center;
+    }
+    h3 {
+        margin: 16px 0;
+        font-size: 1.5em;
+        font-weight: bold;
+        .fc-orange {
+            color: $orange;
+        }
+    }
+    .feature {
+        h3 {
+            margin: 8px 0;
+        }
+    }
+    h4 {
+        margin: 16px 0 32px;
+        color: $orange;
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+        .fc-bk {
+            color: #333;
+        }
+        &.future {
+            text-align: left;
+            margin-bottom: 0px;
+        }
+    }
+    .box-area {
+        display: block;
+        .box {
+            margin-bottom: 32px;
+        }
+        &.news {
+            .box {
+                .box-content {
+                    .article-title {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+    .feature {
+        margin-top: 60px;
+        .feature-part {
+            display: block;
+            align-items: center;
+            margin-bottom: 32px;
+            .feature-img {
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+    .Accordion {
+        .pointerCursor {
+            padding: 16px;
+            border-bottom: 1px solid #333;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+    }
+    .contact-detail {
+        .map {
+            padding-bottom: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .contact-detail {
+        display: block;
+        justify-content: center;
+        .text {
+            text-align: center;
+            padding-top: 32px;
+            ul {
+                li {
+                    line-height: 2em;
+                }
+            }
+        }
+        .map {
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 30%;
+            position: relative;
+            iframe {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .contact-detail {
+        .map {
+            padding-bottom: 80%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .feature-txt {
+        min-width: 650px;
+    }
+    section {
+        &#contact {
+            background-color: #f5f5f5;
+        }
+    }
+}
+
+// ページ上部に戻る
+#pagetop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    margin: 0;
+    a {
+        position: relative;
+        display: flex;
+        width: 65px;
+        height: 65px;
+        justify-content: center;
+        background: #ffa650;
+        color: #fff;
+        align-items: center;
+        text-decoration: none;
+        font-size: 32px;
+        border-radius: 100%;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #pagetop a {
+        width: 45px;
+        height: 45px;
+    }
+}
