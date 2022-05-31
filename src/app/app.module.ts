@@ -14,13 +14,8 @@ import { LawComponent } from "./law/law.component";
 import { PolicyComponent } from "./policy/policy.component";
 import { RuleComponent } from "./rule/rule.component";
 
-import { HomeComponent } from "./home/home.component";
-import { HomeserviceComponent } from "./home/service/service.component";
 import { HomeNewsComponent } from "./home/news/news.component";
-import { HomeFaqComponent } from "./home/faq/faq.component";
 import { HomeContactComponent } from "./home/contact/contact.component";
-import { ParallaxComponent } from "./home/parallax/parallax.component";
-
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireFunctionsModule, REGION } from "@angular/fire/functions";
@@ -53,27 +48,6 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: "popup",
   signInOptions: [
-    //   firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    //   {
-    //     scopes: [
-    //       'public_profile',
-    //       'email',
-    //       'user_likes',
-    //       'user_friends'
-    //     ],
-    //     customParameters: {
-    //       'auth_type': 'reauthenticate'
-    //     },
-    //     provider: firebase.auth.FacebookAuthProvider.PROVIDER_ID
-    //   },
-    //   firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-    //   firebase.auth.GithubAuthProvider.PROVIDER_ID,
-    //   {
-    //     requireDisplayName: false,
-    //     provider: firebase.auth.EmailAuthProvider.PROVIDER_ID
-    //   },
-    //   firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-    //   firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
   ],
   tosUrl: "./rule",
@@ -86,15 +60,11 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
     LawComponent,
     PolicyComponent,
     RuleComponent,
-    HomeserviceComponent,
     HomeNewsComponent,
-    HomeFaqComponent,
     HomeContactComponent,
-    ParallaxComponent,
     StripeComponent,
     WaitDialogComponent,
     PriceComponent,
