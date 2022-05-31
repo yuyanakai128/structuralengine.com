@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { HomeComponent } from "./home/home.component";
 import { LawComponent } from "./law/law.component";
 import { PolicyComponent } from "./policy/policy.component";
 import { RuleComponent } from "./rule/rule.component";
@@ -12,7 +11,6 @@ import { FormalComponent } from "./formal/formal.component";
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: FormalComponent },
-  { path: "pop", component: HomeComponent },
   { path: "law", component: LawComponent },
   { path: "policy", component: PolicyComponent },
   { path: "rule", component: RuleComponent },
