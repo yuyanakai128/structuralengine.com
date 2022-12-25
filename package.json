@@ -1,9 +1,9 @@
 {
   "name": "structuralengine",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && ng serve",
     "build": "ng build --configuration production --base-href \"https://structuralengine.com\" && angular-cli-ghpages",
     "test": "ng test",
     "lint": "ng lint",
