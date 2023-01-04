@@ -1,0 +1,125 @@
+.desktop {
+  max-width: 1200px;
+}
+
+body {
+  padding-bottom: 3%;
+  background: #F6F8F9;
+  font-size: 1em;
+}
+
+#login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+#login h2 {
+  width: 100%;
+}
+#login h2 img {
+  width: 200px;
+}
+#login h3 {
+  width: 100%;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.u-body {
+  height: 100vh;
+  background-image: url(assets/images/background_black.jpg);
+  background-size: cover;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "heisei-kaku-gothic-std", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+}
+
+.bl_media_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bl_media_container .bl_media_itemWrapper .bl_media_item {
+  padding: 24px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+.bl_media_container .bl_media_itemWrapper .bl_media_item .img {
+  width: 52px;
+  margin-bottom: 10px;
+}
+.bl_media_container .bl_media_itemWrapper .bl_media_item .title {
+  margin: 0;
+  font-size: 18px;
+}
+.bl_media_container .bl_media_itemWrapper .bl_media_item .text {
+  font-size: 14px;
+}
+.bl_media_container .bl_media_itemWrapper .bl_media_item:hover {
+  opacity: 0.8;
+}
+
+.user-info {
+  width: 23%;
+  padding: 30px;
+  margin-left: 10px;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+.user-info .user-name {
+  color: #000000;
+  font-size: 28px;
+  font-weight: bold;
+}
+.user-info dt {
+  margin: 1.5em 0 0.5em;
+  padding: 0.1em 0.25em;
+  background: linear-gradient(90deg, #86a0f3, #ecaaa1);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+.user-info dd {
+  margin: 0;
+}
+.user-info .logout {
+  display: block;
+  margin-top: 8em;
+  text-align: center;
+}
+
+@media screen and (max-width: 1080px) {
+  .bl_media_container,
+.user-info {
+    width: 100%;
+  }
+  .bl_media_container {
+    grid-template-columns: 1fr;
+  }
+  .user-info {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}
+/*
+@media screen and (max-width: 768px) {
+    .bl_media_container {
+        .bl_media_itemWrapper {
+            width: 100%;
+            margin-bottom: 1.5em;
+        }
+    }
+}
+*//*# sourceMappingURL=stripe.component.css.map */

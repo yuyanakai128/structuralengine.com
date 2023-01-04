@@ -1,0 +1,95 @@
+<!doctype html>
+<html style="font-size: 16px;" lang="jp">
+
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1XND52NJC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C1XND52NJC');
+        gtag('config', 'UA-192683293-1');
+    </script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="Structural Engine(株式会社ささこう)では、立体骨組解析や断面性能照査などをはじめとしたオンライン構造解析ソフトウェアを提供しています。">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Structural Engine | (株)ささこう</title>
+    <base href="/">
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="/stripe.component.css" />
+
+    <meta name="generator" content="">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/fa3c078daa.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <meta property="og:title" content="home">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#539092">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="u-body">
+    <section id="login">
+        <h2><img src="/assets/images/logo_white.png" alt="logo"></h2>
+        <h3>Your Software</h3>
+        <ul class="bl_media_container">
+            <li class="bl_media_itemWrapper">
+                <div class="bl_media_item">
+                <img class="img" src="/assets/images/service_1.png" alt="">
+                <h4 class="title">立体骨組応力解析</h4>
+                <p class="text">任意系立体骨組構造物の応力解析を<br>行うプログラム</p>
+                </div>
+            </li>
+            <li class="bl_media_itemWrapper">
+                <div class="bl_media_item">
+                <img class="img" src="/assets/images/service_2.png" alt="">
+                <h4 class="title">断面性能照査</h4>
+                <p class="text">断面の釣り合い計算および<br>応力度の算定を行うプログラム</p>
+                </div>
+            </li>
+            <li class="bl_media_itemWrapper">
+                <div class="bl_media_item">
+                <img class="img" src="/assets/images/service_3.png" alt="">
+                <h4 class="title">3Dモデルジェネレーター</h4>
+                <p class="text">合成桁のIFCモデルを<br>作成するプログラム</p>
+                </div>
+            </li>         
+        </ul>
+        <div class="user-info">
+            <!-- <div class="user-name">{{ currentUser.displayName }}</div> -->
+            <div class="user-name">TASUKU TAKATORI</div>
+            <dl>
+                <dt>加入プラン</dt>
+                <dd>
+                    <!-- <span class="plan-price">&yen;{{ currentUser.price }}<span class="plan-term">/{{
+                    currentUser.interval
+                    }}</span></span> -->
+                    フリープラン
+                </dd>
+                <dt>利用可能ポイント</dt>
+                <dd>1000ポイント/day</dd>
+            </dl>
+            <a class="logout" (click)="logout()">ログアウト</a>
+        </div>
+    </section>
+</body>
+</html>

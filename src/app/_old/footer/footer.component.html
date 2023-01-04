@@ -1,0 +1,38 @@
+<footer class="footer">
+  <div class="footer_inner">
+    <div class="footer_links">
+      <div class="footer_link">
+        <a routerLink="/rule">利用規約</a>
+      </div>
+      <div class="footer_link">
+        <a routerLink="/policy">プライバシーポリシー</a>
+      </div>
+      <div class="footer_link">
+        <a routerLink="/law">特定商取引に基づく表示</a>
+      </div>
+    </div>
+    <div class="language-area">
+      <div ngbDropdown>
+        <a
+          class="btn btn-outline-primary"
+          id="language1"
+          ngbDropdownToggle
+          class="menu-btn lang"
+          >{{ language.languageIndex[language.browserLang] }}</a
+        >
+        <div ngbDropdownMenu aria-labelledby="language1">
+          <ng-container *ngFor="let index of language.languageIndex | keyvalue">
+            <a
+              ngbDropdownItem
+              (click)="language.trans(index.key)"
+              class="menu-btn"
+              >{{ index.value }}</a
+            >
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_copy">© 2022 Structural Engine</div>
+  </div>
+</footer>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html style="font-size: 16px;" lang="jp">
+
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1XND52NJC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C1XND52NJC');
+        gtag('config', 'UA-192683293-1');
+    </script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="Structural Engine(株式会社ささこう)では、立体骨組解析や断面性能照査などをはじめとしたオンライン構造解析ソフトウェアを提供しています。">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Structural Engine | (株)ささこう</title>
+    <base href="/">
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="/formal.component.css" />
+
+    <meta name="generator" content="">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/fa3c078daa.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <meta property="og:title" content="home">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#539092">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="u-body">
+
+  <!-- ヘッダー -->
+
+      <header>
+        <img class="img" src="/assets/images/malme_logo.svg" alt="logo">
+      </header>
+
+    <div class="main_container">
+
+        <!-- 左カラム-->
+
+        <div class="left_container">
+            <h2 class="vision">土木事業の三次元化に<br>本気で取り組む</h2>
+            <ul class="bl_media_container">
+                <li class="bl_media_itemWrapper">
+                  <div class="bl_media_item">
+                    <img class="img" src="/assets/images/service_1.png" alt="">
+                    <h3 class="title">立体骨組応力解析</h3>
+                    <p class="text">任意系立体骨組構造物の応力解析を<br>行うプログラム</p>
+                  </div>
+                </li>
+                <li class="bl_media_itemWrapper">
+                  <div class="bl_media_item">
+                    <img class="img" src="/assets/images/service_2.png" alt="">
+                    <h3 class="title">断面性能照査</h3>
+                    <p class="text">断面の釣り合い計算および<br>応力度の算定を行うプログラム</p>
+                  </div>
+                </li>
+                <li class="bl_media_itemWrapper">
+                  <div class="bl_media_item">
+                    <img class="img" src="/assets/images/service_3.png" alt="">
+                    <h3 class="title">3Dモデルジェネレーター</h3>
+                    <p class="text">合成桁のIFCモデルを<br>作成するプログラム</p>
+                  </div>
+                </li>           
+              </ul>
+        </div>
+ 
+        <!--ログイン-->     
+        <div class="right_container">
+            <div class = "login_container">
+                <h2 class="img"><img src="/assets/images/logo.png" alt="ログイン"></h2>
+                <form [formGroup]="loginForm" (ngSubmit)="login()" (submit)="login()">
+                  <input type="email" name="mail" required email class="form-control" formControlName="email" [(ngModel)]="loginUserName" placeholder="Email" id="user_name_id">
+                  <input type="password" class="form-control" formControlName="password" [(ngModel)]="loginPassword" placeholder="Password" required>
+                </form>
+                <div class="button-area">
+                    <a class="btn-md new-resis" (click)="login()">Log in</a>
+                </div>
+                <a class="forget" (click)="forgetPass()">Forgot Password?</a>
+                <hr>
+                <div class="container">
+                    <div class="button-area">
+                        <a class="btn-lg new-resis" (click)="new_resis()">Sign Up</a>
+                    </div>
+                </div>
+             </div>
+        </div> 
+    </div>
+
+    <!-- フッター -->
+
+    <footer>
+      <p class="copyright"> Copyright Malme inc All rights reserved. </p>
+    </footer>
+
+</body>
+
+</html>
