@@ -1,0 +1,142 @@
+.desktop {
+    max-width: 1200px;
+}
+
+body {
+    // font-family: Open Sans, Arial, sans-serif, unset;
+    padding-bottom: 3%;
+    background: #F6F8F9;
+    font-size: 1em;
+}
+
+#login {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2%;
+
+    h2 {
+        width: 100%;
+
+        img {
+            width: 200px;
+        }
+    }
+    h3 {
+        width: 100%;
+        color: #ffffff;
+        font-size: 28px;
+        font-weight: bold;
+    }
+}
+
+// 新ログイン後
+
+.u-body{
+    height: 100vh;
+    background-image: url(assets/images/background_black.jpg);
+    background-size: cover;
+    font-family: 'Hiragino Kaku Gothic ProN' , 'Noto Sans JP', 'heisei-kaku-gothic-std' ,'Helvetica Neue', Helvetica, Arial,  Sans-Serif;
+}
+
+.bl_media_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .bl_media_itemWrapper {
+       // width: 45%;
+
+        .bl_media_item {
+            //margin-left: 10px;
+            //margin-right: 10px;
+            padding: 24px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #FFFFFF;
+
+            .img {
+                width: 52px;
+                margin-bottom: 10px;
+            }
+            .title{
+                margin: 0;
+                font-size: 18px;
+            } 
+            .text{
+               font-size: 14px;
+            }
+        }
+        .bl_media_item:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
+.user-info {
+    width: 23%;
+    padding: 30px;
+    margin-left: 10px;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 20px;
+
+    .user-name {
+        color: #000000;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    dt {
+        margin: 1.5em 0 0.5em;
+        padding: 0.1em 0.25em;
+        background: linear-gradient(90deg, #86a0f3, #ecaaa1);
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    dd {
+        margin: 0;
+    }
+
+    .logout {
+        display: block;
+        margin-top: 8em;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 1080px) {
+    .bl_media_container,
+    .user-info {
+        width: 100%;
+    }
+   .bl_media_container {
+    grid-template-columns: 1fr;
+   }
+   .user-info {
+    margin-left: 0px;
+    margin-top: 10px;
+   }
+}
+
+/*
+@media screen and (max-width: 768px) {
+    .bl_media_container {
+        .bl_media_itemWrapper {
+            width: 100%;
+            margin-bottom: 1.5em;
+        }
+    }
+}
+*/
